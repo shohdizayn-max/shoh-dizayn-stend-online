@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101b32">
+<title>SHOH DIZAYN | STEND ONLINE</title>
+<style>
+:root{--navy:#101b32;--navy2:#172743;--gold:#d7ad52;--gold2:#f0d58e;--paper:#f5f6f8;--ink:#172033;--muted:#778196;--line:#e5e8ee;--white:#fff;--green:#16845b;--red:#c64b4b}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}.topbar{background:var(--navy);color:white;padding:13px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:20;box-shadow:0 4px 18px #101b3222}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:1px}.brandmark{width:38px;height:38px;border:2px solid var(--gold);border-radius:11px;display:grid;place-items:center;color:var(--gold);font-weight:900}.brand small{display:block;font-size:9px;letter-spacing:3px;color:var(--gold2);font-weight:600}.top-actions{display:flex;gap:8px}.btn{border-radius:10px;padding:11px 15px;font-weight:750;transition:.2s}.btn-gold{background:var(--gold);color:#172033}.btn-dark{background:var(--navy);color:#fff}.btn-light{background:#eef1f6;color:var(--navy)}.btn-outline{background:transparent;border:1px solid #ffffff55;color:#fff}.btn-danger{background:#fff0f0;color:var(--red)}.btn:active{transform:scale(.98)}.container{width:min(1160px,calc(100% - 28px));margin:22px auto 60px}.hero{background:linear-gradient(115deg,#101b32 0%,#1c3152 65%,#293e5d 100%);color:#fff;border-radius:22px;overflow:hidden;display:grid;grid-template-columns:1.1fr .9fr;min-height:245px;box-shadow:0 14px 35px #101b321c}.hero-copy{padding:30px;align-self:center}.eyebrow{color:var(--gold2);font-size:11px;font-weight:800;letter-spacing:2.5px}.hero h1{font-size:clamp(27px,4vw,43px);line-height:1.08;margin:12px 0}.hero p{color:#d6deea;max-width:520px;line-height:1.6}.hero-art{position:relative;display:grid;place-items:center;min-height:210px;background:radial-gradient(circle at 55% 45%,#d7ad5233,transparent 55%)}.hero-art img{width:78%;height:190px;object-fit:contain;border-radius:13px}.hero-placeholder{border:1px solid #d7ad5277;color:var(--gold2);padding:30px 25px;border-radius:16px;text-align:center;font-weight:900;letter-spacing:2px;transform:rotate(-4deg);box-shadow:0 15px 35px #0003}.hero-dots{display:flex;gap:6px;margin-top:16px}.dot{width:7px;height:7px;border-radius:50%;background:#ffffff55}.dot.active{background:var(--gold);width:22px;border-radius:10px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:28px 0 14px}.section-head h2{font-size:22px;margin:0;color:var(--navy)}.section-head p{margin:4px 0 0;color:var(--muted);font-size:13px}.categories{display:flex;gap:8px;overflow:auto;padding:2px 0 8px}.chip{white-space:nowrap;padding:10px 15px;border-radius:30px;background:#fff;border:1px solid var(--line);color:#59647a;font-weight:700}.chip.active{background:var(--navy);color:var(--gold2);border-color:var(--navy)}.toolbar{display:flex;gap:10px;margin:14px 0;flex-wrap:wrap}.toolbar input{flex:1;min-width:180px}.field, input,select,textarea{border:1px solid #dfe4ec;border-radius:10px;padding:11px 12px;background:#fff;color:var(--ink);width:100%;outline:none}.field:focus,input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px #d7ad5222}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.product{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 5px 18px #17203308}.product-img{height:175px;background:linear-gradient(135deg,#e9edf3,#f8f9fb);display:grid;place-items:center;overflow:hidden;color:#9aa4b4}.product-img img{width:100%;height:100%;object-fit:cover}.product-placeholder{text-align:center;font-size:13px;font-weight:800;letter-spacing:1px}.product-body{padding:14px}.product-body h3{font-size:16px;margin:0 0 5px}.meta{font-size:12px;color:var(--muted);line-height:1.5}.product-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:13px}.pricehint{font-size:12px;color:#68748a}.pricehint b{display:block;color:var(--navy);font-size:15px}.empty{background:#fff;border:1px dashed #ccd3df;border-radius:15px;padding:30px;text-align:center;color:var(--muted);grid-column:1/-1}.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;margin-top:18px}.panel h2,.panel h3{margin:0 0 14px;color:var(--navy)}.cart-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}.cart-line{display:grid;grid-template-columns:68px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.cart-thumb{width:68px;height:58px;border-radius:9px;background:#eef1f5;overflow:hidden;display:grid;place-items:center;font-size:10px;color:var(--muted)}.cart-thumb img{width:100%;height:100%;object-fit:cover}.cart-line h4{margin:0 0 4px;font-size:14px}.cart-line small{color:var(--muted)}.cart-line-actions{display:flex;gap:6px;align-items:center;margin-top:7px}.qty{width:58px;padding:6px}.remove{background:#fff0f0;color:var(--red);padding:7px 9px;border-radius:8px}.total-row{display:flex;justify-content:space-between;gap:10px;padding:8px 0;color:#657087}.total-row.grand{border-top:1px solid var(--line);margin-top:8px;padding-top:15px;font-size:19px;color:var(--navy);font-weight:900}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.formgrid .full{grid-column:1/-1}.label{display:block;font-size:12px;font-weight:800;color:#59647a;margin:0 0 6px}.muted{color:var(--muted);font-size:12px;line-height:1.5}.admin-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:15px}.admin-tab{padding:9px 12px;border-radius:9px;background:#eef1f6;color:var(--navy);font-weight:750}.admin-tab.active{background:var(--navy);color:var(--gold2)}.admin-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid var(--line)}.admin-row strong{font-size:14px}.admin-row small{display:block;color:var(--muted)}.hidden{display:none!important}.notice{padding:12px 14px;border-radius:11px;background:#fff7e6;color:#75551a;font-size:13px;line-height:1.5;margin:12px 0}.success{background:#e9f7f0;color:#176544}.footer{background:var(--navy);color:#cbd4e1;text-align:center;padding:24px 15px;font-size:12px}.modal-backdrop{position:fixed;inset:0;background:#0b1425aa;z-index:50;display:none;align-items:end;justify-content:center;padding:12px}.modal-backdrop.show{display:flex}.modal{background:#fff;border-radius:20px 20px 14px 14px;width:min(650px,100%);max-height:92vh;overflow:auto;padding:20px;box-shadow:0 20px 70px #0004}.modal-head{display:flex;justify-content:space-between;align-items:center;gap:10px}.close{background:#eef1f6;border-radius:50%;width:34px;height:34px;font-size:20px}.option-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.calc-result{background:#f5f6f8;border-radius:12px;padding:12px;margin:12px 0}.calc-result strong{font-size:22px;color:var(--navy)}.mini-note{font-size:11px;color:var(--muted)}.order-card{border:1px solid var(--line);border-radius:12px;padding:13px;margin:10px 0}.order-card h4{margin:0 0 5px}.zoom-image{max-width:100%;max-height:72vh;object-fit:contain;border-radius:12px}.zoom-title{font-weight:850;color:var(--navy);margin:8px 0}.subcats{display:flex;gap:7px;flex-wrap:wrap;margin:8px 0 14px}.checkrow{display:flex;gap:12px;flex-wrap:wrap}.checkrow label{display:flex;align-items:center;gap:6px;background:#f5f6f8;padding:9px 11px;border-radius:9px;font-size:13px;font-weight:700}.checkrow input{width:auto}.product-img{cursor:zoom-in}.material-card{background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden;cursor:pointer}.material-card img{width:100%;height:150px;object-fit:cover;display:block}.material-card .product-body{padding:12px}.material-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.material-detail-grid img{width:100%;height:180px;object-fit:contain;background:#f4f6f9;border-radius:10px}.badge{display:inline-block;border-radius:20px;padding:4px 8px;background:#fff3d6;color:#775719;font-size:11px;font-weight:800}
+.pocket-toggle{width:100%;text-align:left;display:flex;align-items:center;justify-content:flex-start;gap:8px;border:1px solid #d9e0ea;background:#f7f8fb;color:var(--navy);font-weight:850;padding:10px 13px}.pocket-toggle.open{border-color:var(--gold);background:#fffaf0}.pocket-options{margin-top:8px;padding:10px;border:1px solid var(--line);border-radius:12px;background:#fbfcfe}.pocket-options-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px;color:var(--navy);font-size:12px}.pocket-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.pocket-grid>div{padding:7px;border:1px solid #e7eaf0;border-radius:9px;background:#fff}.pocket-grid .label{font-size:11px;margin-bottom:4px}.pocket-grid input{padding:7px 8px;font-size:13px;border-radius:7px}.pocket-options.hidden{display:none!important}@media(max-width:480px){.pocket-grid{grid-template-columns:1fr 1fr}.pocket-options{padding:8px}.pocket-grid>div{padding:6px}}
+#quotePrintArea{display:none}.order-items{width:100%;border-collapse:collapse;margin:10px 0;font-size:12px}.order-items th,.order-items td{border:1px solid #d9dee7;padding:6px;text-align:left}.order-items th{background:#f0f2f6;color:#172033}.order-product{display:flex;gap:10px;align-items:center}.order-product img{width:72px;height:58px;object-fit:cover;border-radius:7px;background:#eef1f5}.file-link{display:inline-block;margin:5px 6px 5px 0;color:#17365e;font-weight:700}.order-photo{width:150px;height:115px;object-fit:contain;object-position:center;border:1px solid #d9dee8;border-radius:9px;background:#f7f8fa;cursor:zoom-in;flex:0 0 auto}.order-product{align-items:flex-start}.order-product>div{min-width:0}.order-product img:hover{box-shadow:0 3px 14px #17203322}@media(max-width:760px){.order-photo{width:120px;height:100px}}.admin-search{margin:8px 0 12px}@media print{body>*:not(main){display:none!important}main>*:not(#quotePrintArea){display:none!important}#quotePrintArea{display:block!important;padding:12px;color:#111}#quotePrintArea h2{margin:0 0 8px}#quotePrintArea table{width:100%;border-collapse:collapse;font-size:10px}#quotePrintArea th,#quotePrintArea td{border:1px solid #aaa;padding:5px;text-align:left}#quotePrintArea .print-img{width:42px;height:32px;object-fit:cover}#quotePrintArea .print-total{text-align:right;font-weight:800;margin-top:10px}}
+@media(max-width:760px){.topbar{padding:10px 12px}.brand{font-size:13px}.brand small{font-size:8px}.top-actions .btn{padding:9px 10px;font-size:12px}.container{width:calc(100% - 22px);margin-top:13px}.hero{grid-template-columns:1fr;min-height:unset}.hero-copy{padding:23px 20px 10px}.hero-art{min-height:145px}.hero-art img{height:125px}.hero-placeholder{padding:18px 22px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product-img{height:130px}.product-body{padding:11px}.product-body h3{font-size:14px}.product-foot{align-items:stretch;flex-direction:column}.product-foot .btn{width:100%}.cart-layout{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}.formgrid .full{grid-column:auto}.section-head h2{font-size:19px}.panel{padding:14px}.cart-line{grid-template-columns:55px 1fr auto;gap:8px}.cart-thumb{width:55px;height:52px}}
+@media(max-width:380px){.grid{grid-template-columns:1fr}.product-img{height:175px}.brandmark{width:32px;height:32px}}
+@media(max-width:650px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.material-detail-grid{grid-template-columns:1fr}.material-card img{height:125px}}
+@media print{body{background:#fff}.topbar,.hero,.categories,.toolbar,.footer,.no-print,#catalogSection,#adminSection,#cartSection .panel:first-child{display:none!important}.container{width:100%;margin:0}.panel{border:0;box-shadow:none}.cart-layout{display:block}.cart-line{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header class="topbar">
+ <div class="brand"><div class="brandmark">SD</div><div>SHOH DIZAYN<small>STEND ONLINE</small></div></div>
+ <div class="top-actions"><button class="btn btn-outline" onclick="showSection('materialsSection')">Materiallar</button><button class="btn btn-outline" onclick="showSection('cartSection')">Savatcha <span id="cartCount">0</span></button><button class="btn btn-gold" onclick="showSection('adminSection')">Admin</button></div>
+</header>
+<main class="container">
+<div id="quotePrintArea" class="hidden"></div>
+<section class="hero" id="hero">
+ <div class="hero-copy"><div class="eyebrow">SHOH DIZAYN • MAXSUS TAKLIF</div><h1 id="heroTitle">Siz uchun zamonaviy stendlar</h1><p id="heroText">Maktab, bog‘cha, ofis va tashkilotlar uchun sifatli stendlar. O‘zingizga mos material va o‘lchamni tanlang.</p><button class="btn btn-gold" onclick="document.getElementById('catalogSection').scrollIntoView({behavior:'smooth'})">Katalogni ko‘rish</button><div class="hero-dots" id="heroDots"><span class="dot active"></span></div></div>
+ <div class="hero-art" id="heroArt"><div class="hero-placeholder">SIZNING STENDINGIZ<br><span style="font-size:11px">REKLAMA JOYI</span></div></div>
+</section>
+
+<section id="catalogSection">
+ <div class="section-head"><div><h2>Stendlar katalogi</h2><p>Tanlang, narxini hisoblang va savatchaga qo‘shing.</p></div></div>
+ <div class="categories" id="categories"></div><div class="subcats hidden" id="subcategories"></div>
+ <div class="toolbar"><button class="btn btn-gold" onclick="openCustomDesign()">＋ O‘z dizaynim bor</button><input id="searchInput" placeholder="Stend nomi yoki kodi bo‘yicha qidirish..." oninput="renderProducts()"><select id="sortSelect" style="max-width:170px" onchange="renderProducts()"><option value="new">Yangi qo‘shilgan</option><option value="name">Nomi bo‘yicha</option></select></div>
+ <div class="grid" id="productGrid"></div>
+</section>
+
+<section id="materialsSection" class="hidden">
+ <div class="section-head"><div><h2>Materiallar katalogi</h2><p>Materiallar bilan tanishing. Batafsil ma’lumot uchun rasm yoki nom ustiga bosing.</p></div><button class="btn btn-light" onclick="showSection('catalogSection')">← Katalogga qaytish</button></div>
+ <div class="grid" id="materialCatalogGrid"></div>
+</section>
+
+<section id="cartSection" class="hidden">
+ <div class="section-head"><div><h2>Savatcha</h2><p>Bir nechta stendni bitta buyurtmaga jamlang.</p></div><button class="btn btn-light no-print" onclick="showSection('catalogSection')">← Katalog</button></div>
+ <div class="cart-layout">
+  <div class="panel"><h3>Tanlangan stendlar</h3><div id="cartLines"></div><div id="cartEmpty" class="empty">Savatchangiz hozircha bo‘sh.</div></div>
+  <div class="panel"><h3>Umumiy hisob-kitob</h3><div id="cartTotals"></div><button class="btn btn-dark" style="width:100%;margin-top:10px" onclick="printQuote()">PDF hisob-kitobni yuklab olish</button><p class="muted">PDF saqlash uchun chop etish oynasida “Save as PDF / PDF sifatida saqlash”ni tanlang.</p>
+   <div class="divider"></div><h3 style="margin-top:18px">Buyurtma berish</h3>
+   <form id="checkoutForm" onsubmit="submitOrder(event)"><div class="formgrid">
+    <div><label class="label">Ismingiz *</label><input required id="custName" placeholder="Ism familiya"></div>
+    <div><label class="label">Telefon raqamingiz *</label><input required id="custPhone" type="tel" placeholder="+998 90 123 45 67"></div>
+    <div class="full"><label class="label">Tashkilot nomi</label><input id="custOrg" placeholder="Maktab, bog‘cha yoki tashkilot"></div>
+    <div class="full"><label class="label">Qo‘shimcha izoh</label><textarea id="custNote" rows="2" placeholder="O‘lcham, yetkazib berish yoki boshqa talablar..."></textarea></div>
+   </div><button class="btn btn-gold" style="width:100%;margin-top:13px" type="submit">Buyurtmani yuborish</button></form>
+   <div class="notice">Buyurtma Supabase onlayn bazasiga yuboriladi. Eslatma: mijoz yuklagan dizayn faylining o‘zi hozircha serverga biriktirilmaydi; fayl nomi va izohi buyurtmada saqlanishi mumkin.</div>
+  </div>
+ </div>
+ <div id="orderSuccess" class="panel hidden" style="text-align:center"><div style="font-size:38px;color:var(--green)">✓</div><h2>BUYURTMANGIZ QABUL QILINDI!</h2><p><b>SIZ BILAN TEZ ORADA TELEFON ORQALI BOG‘LANAMIZ.</b></p><p id="orderNumber" class="muted"></p><button class="btn btn-dark" onclick="showSection('catalogSection')">Katalogga qaytish</button></div>
+</section>
+
+<section id="adminSection" class="hidden">
+ <div class="section-head"><div><h2>Admin panel</h2><p>Katalog, reklama, narxlar va buyurtmalarni boshqarish.</p></div><button class="btn btn-light" onclick="showSection('catalogSection')">← Saytga qaytish</button></div>
+ <div id="adminLogin" class="panel" style="max-width:420px;margin:0 auto"><h3>Admin kirish</h3><label class="label">Admin elektron pochtasi</label><input id="adminEmail" type="email" autocomplete="username" placeholder="Admin email manzili"><label class="label" style="margin-top:10px">Parol</label><input id="adminPassword" type="password" autocomplete="current-password" placeholder="Supabase hisobingiz paroli"><button class="btn btn-dark" style="width:100%;margin-top:12px" onclick="loginAdmin()">Kirish</button><p class="muted">Admin kirishi Supabase Auth orqali himoyalangan. Demo parol ishlatilmaydi.</p></div>
+ <div id="adminDashboard" class="panel hidden">
+  <div id="newOrderNotice" role="status" aria-live="polite" style="display:none;margin:12px 0;padding:13px 16px;border:1px solid #d7b45a;border-radius:12px;background:#fff8e6;color:#503b0b;cursor:pointer;font-weight:700" onclick="openNewOrders()">🔔 Yangi buyurtmalar: <span id="newOrderNoticeCount">0</span> ta — ko‘rish uchun bosing</div>
+  <div class="admin-tabs"><button class="admin-tab active" type="button" onclick="adminTab('productsAdmin',this)">Mahsulotlar</button><button type="button" class="admin-tab" onclick="adminTab('promoAdmin',this)">Reklama</button><button type="button" class="admin-tab" onclick="adminTab('pricesAdmin',this)">Narxlar</button><button type="button" class="admin-tab" id="ordersAdminTab" onclick="adminTab('ordersAdmin',this)">Buyurtmalar <span id="newOrderTabCount" style="display:none;margin-left:5px;padding:2px 7px;border-radius:99px;background:#c62828;color:white;font-size:11px;font-weight:800">0</span></button><button type="button" class="admin-tab" onclick="adminTab('materialsAdmin',this)">Materiallar katalogi</button></div>
+  <div id="productsAdmin">
+   <h3>Yangi stend qo‘shish / tahrirlash</h3><form id="productForm" onsubmit="saveProduct(event)"><input type="hidden" id="editId"><div class="formgrid">
+    <div><label class="label">Stend nomi *</label><input id="pName" required placeholder="Masalan: Maktab nizomi"></div>
+    <div><label class="label">Mahsulot kodi (avtomatik)</label><input id="pCode" readonly placeholder="Avtomatik beriladi"></div>
+    <div class="full"><label class="label">Kategoriyalar (bir nechtasini tanlash mumkin)</label><div class="checkrow" id="pCategories"><label><input type="checkbox" value="Maktab"> Maktab</label><label><input type="checkbox" value="Bog‘cha"> Bog‘cha</label><label><input type="checkbox" value="Ofis"> Ofis</label><label><input type="checkbox" value="Tashkilot"> Tashkilot</label><label><input type="checkbox" value="Boshqa"> Boshqa</label></div></div>
+    <div class="full" id="schoolSubWrap"><label class="label">Maktab ichidagi joylashuvi / fanlar (bir nechtasini tanlash mumkin)</label><div class="checkrow" id="pSchoolSubs"><label><input type="checkbox" value="Koridor va foye"> Koridor va foye</label><label><input type="checkbox" value="Matematika"> Matematika</label><label><input type="checkbox" value="Ona tili va adabiyot"> Ona tili va adabiyot</label><label><input type="checkbox" value="Ingliz tili"> Ingliz tili</label><label><input type="checkbox" value="Rus tili"> Rus tili</label><label><input type="checkbox" value="Tarix"> Tarix</label><label><input type="checkbox" value="Geografiya"> Geografiya</label><label><input type="checkbox" value="Biologiya"> Biologiya</label><label><input type="checkbox" value="Fizika"> Fizika</label><label><input type="checkbox" value="Kimyo"> Kimyo</label><label><input type="checkbox" value="Informatika"> Informatika</label><label><input type="checkbox" value="Boshlang‘ich ta’lim"> Boshlang‘ich ta’lim</label><label><input type="checkbox" value="Psixologiya"> Psixologiya</label><label><input type="checkbox" value="Astronomiya"> Astronomiya</label><label><input type="checkbox" value="Tasviriy san’at"> Tasviriy san’at</label><label><input type="checkbox" value="Jismoniy tarbiya"> Jismoniy tarbiya</label><label><input type="checkbox" value="Huquqshunoslik"> Huquqshunoslik</label><label><input type="checkbox" value="CHQBT"> CHQBT</label><label><input type="checkbox" value="Mehnat xavfsizligi"> Mehnat xavfsizligi</label><label><input type="checkbox" value="Burchaklar"> Burchaklar</label><label><input type="checkbox" value="Boshqa fanlar"> Boshqa fanlar</label></div></div>
+    <div><label class="label">O‘lchami (masalan 100×150 sm)</label><input id="pSize" placeholder="100×150 sm"></div>
+    <div class="full"><label class="label">Asosiy JPG/PNG rasmi</label><input id="pImage" type="file" accept="image/jpeg,image/png,image/webp"></div>
+   </div><p class="mini-note">Rasm brauzer xotirasida saqlanadi. Juda katta rasm yuklamaslik tavsiya etiladi.</p><button class="btn btn-gold" type="submit">Saqlash</button> <button class="btn btn-light" type="button" onclick="resetProductForm()">Tozalash</button></form><div style="margin-top:22px"><h3>Mavjud stendlar</h3><input id="adminProductSearch" placeholder="Nomi yoki SD kodi bo‘yicha qidirish..." oninput="renderAdminProducts()"><div id="adminProductList"></div></div>
+  </div>
+  <div id="promoAdmin" class="hidden"><h3>Ustki reklama / muhim stend</h3><div class="formgrid"><div class="full"><label class="label">Sarlavha</label><input id="promoTitle" value="Siz uchun zamonaviy stendlar"></div><div class="full"><label class="label">Izoh matni</label><textarea id="promoText" rows="2">Maktab, bog‘cha, ofis va tashkilotlar uchun sifatli stendlar.</textarea></div><div class="full"><label class="label">Reklama rasmi (JPG/PNG)</label><input type="file" id="promoImage" accept="image/jpeg,image/png,image/webp"></div><div class="full"><label class="label">Bosilganda ochiladigan stend</label><select id="promoProduct"></select></div></div><button class="btn btn-gold" style="margin-top:12px" onclick="savePromo()">Reklamani saqlash</button><p class="muted">Reklama rasmi va sarlavha bosh sahifaning eng yuqorisida ko‘rinadi.</p></div>
+  <div id="pricesAdmin" class="hidden"><h3>Material va qo‘shimcha narxlari (so‘m)</h3><div id="priceInputs" class="formgrid"></div><button class="btn btn-gold" style="margin-top:13px" onclick="savePrices()">Narxlarni saqlash</button><p class="muted">Narx o‘zgarsa, keyingi hisob-kitoblarda yangi narx qo‘llanadi.</p></div>
+  <div id="materialsAdmin" class="hidden"><h3>Material katalogiga material qo‘shish / tahrirlash</h3><form id="materialForm" onsubmit="saveMaterial(event)"><input type="hidden" id="materialEditId"><div class="formgrid"><div><label class="label">Material nomi *</label><input id="materialName" required placeholder="Masalan: Fomeks"></div><div><label class="label">Qisqa tavsif</label><input id="materialShort" placeholder="Oq, yengil va silliq material"></div><div class="full"><label class="label">Asosiy rasm *</label><input id="materialImage" type="file" accept="image/jpeg,image/png,image/webp"></div><div class="full"><label class="label">Qo‘shimcha rasmlar (ixtiyoriy)</label><input id="materialGallery" type="file" accept="image/jpeg,image/png,image/webp" multiple></div><div class="full"><label class="label">Stenddagi 3D ko‘rinish rasmi (ixtiyoriy)</label><input id="material3d" type="file" accept="image/jpeg,image/png,image/webp"></div><div class="full"><label class="label">Batafsil ma’lumot</label><textarea id="materialDescription" rows="3" placeholder="Xususiyatlari va qo‘llanilish joylari"></textarea></div></div><p class="mini-note">Materiallar katalogi faqat tanishish uchun. Narx hisoblash alohida kalkulyatorda amalga oshiriladi.</p><button class="btn btn-gold" type="submit">Materialni saqlash</button> <button class="btn btn-light" type="button" onclick="resetMaterialForm()">Tozalash</button></form><div style="margin-top:20px"><h3>Kiritilgan materiallar</h3><div id="adminMaterialList"></div></div></div>
+  <div id="ordersAdmin" class="hidden"><h3>Kelgan buyurtmalar</h3><div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px"><button class="btn btn-dark" onclick="exportOrders()">Excel uchun CSV yuklab olish</button><button class="btn btn-light" type="button" onclick="refreshAdminOrders()">Buyurtmalarni yangilash</button></div><div id="orderList"></div></div>
+ </div>
+</section>
+</main>
+<footer class="footer">© SHOH DIZAYN • STEND ONLINE<br><span style="color:#8e9bb0">Zamonaviy stendlar — qulay tanlov</span><br><a href="tel:886055252" style="display:inline-block;margin-top:10px;color:#f0d58e;font-weight:800;text-decoration:none">Murojaat uchun: 88 605 52 52</a></footer>
+
+<div class="modal-backdrop" id="materialDetailModal" onclick="if(event.target===this)closeMaterialDetail()"><div class="modal"><div class="modal-head"><h2 id="materialDetailName">Material</h2><button class="close" onclick="closeMaterialDetail()">×</button></div><p id="materialDetailShort" class="muted"></p><div class="material-detail-grid" id="materialDetailImages"></div><p id="materialDetailDescription"></p><button class="btn btn-light" style="width:100%" onclick="closeMaterialDetail()">Yopish</button></div></div>
+<div class="modal-backdrop" id="configModal" onclick="if(event.target===this)closeConfig()"><div class="modal">
+ <div class="modal-head"><div><div class="eyebrow" style="color:#9b772e">STEND KALKULYATORI</div><h2 id="configTitle" style="margin:5px 0">Stendni sozlash</h2></div><button class="close" onclick="closeConfig()">×</button></div>
+ <div class="formgrid" style="margin-top:15px">
+  <div><label class="label">Eni (sm) *</label><input type="number" id="width" min="1" value="100" oninput="updateCalc()"></div>
+  <div><label class="label">Bo‘yi (sm) *</label><input type="number" id="height" min="1" value="150" oninput="updateCalc()"></div>
+  <div class="full"><label class="label">Material</label><select id="material" onchange="updateCalc()"><option value="banner">Banner — 30 000 so‘m/m²</option><option value="oracal">Orakal — 50 000 so‘m/m²</option><option value="foamOracal">Fomeks + orakal — 200 000 so‘m/m²</option><option value="glass">Orgsteklo stend — 390 000 so‘m/m²</option><option value="alucobond">Alucobond — 450 000 so‘m/m²</option><option value="oracalCut">Orakal reska — 100 000 so‘m/m²</option><option value="oracalGoldBronze">Orakal reska, oltin va bronza — 160 000 so‘m/m²</option><option value="acrylic">Akril — 500 000 so‘m/m²</option><option value="acrylicGold">Akril, oltin rangli — 700 000 so‘m/m²</option></select></div>
+  <div id="reykaWrap" class="full hidden"><label class="label">Reyka (metr) — mijoz kiritadi</label><input type="number" id="reyka" min="0" step="0.1" value="0" oninput="updateCalc()"></div>
+  <div id="boldWrap" class="full hidden"><label class="label">Bold soni (dona) — zarur miqdorni kiriting</label><input type="number" id="bold" min="0" step="1" value="0" oninput="updateCalc()"><span class="mini-note">Fomeks + orakal va orgsteklo uchun bold tanlash mumkin. 1 dona: 8 000 so‘m.</span></div>
+  <div class="full pocket-select-wrap"><label class="label">Qo‘shimcha jihoz</label><button type="button" class="btn btn-light pocket-toggle" id="pocketToggle" onclick="togglePockets()" aria-expanded="false">＋ KARMASHKA</button><div id="pocketOptions" class="pocket-options hidden"><div class="pocket-options-head"><strong>Karmashka razmerini tanlang</strong><span class="mini-note">Kerakli miqdorni kiriting</span></div><div class="option-grid pocket-grid" id="pockets"></div></div><div id="pocketFitWarning" class="notice hidden"></div></div>
+  <div><label class="label">Stend miqdori</label><input type="number" id="quantity" min="1" value="1" oninput="updateCalc()"></div>
+ </div>
+ <div class="calc-result"><div class="muted">Ushbu sozlama bo‘yicha jami</div><strong id="calcTotal">0 so‘m</strong><div class="mini-note" id="calcBreakdown"></div></div>
+ <button class="btn btn-gold" id="addCartBtn" style="width:100%" onclick="addToCart()">Savatchaga qo‘shish</button>
+</div></div>
+<div class="modal-backdrop" id="customDesignModal" onclick="if(event.target===this)closeCustomDesign()"><div class="modal"><div class="modal-head"><div><div class="eyebrow" style="color:#9b772e">MIJOZ DIZAYNI</div><h2 style="margin:5px 0">O‘z faylingizni yuklang</h2></div><button class="close" onclick="closeCustomDesign()">×</button></div><p class="muted">Tayyor maketingizni yuklang, so‘ng o‘lcham va materialni tanlab hisob-kitob qiling.</p><label class="label">Dizayn fayli *</label><input id="customFile" type="file" accept=".jpg,.jpeg,.png,.webp,.pdf,.cdr,.ai,.psd,.zip"><div id="customFileInfo" class="mini-note" style="margin:6px 0 12px">JPG, PNG, WEBP, PDF, CDR, AI, PSD yoki ZIP. Demo rejimida fayl hajmi 2 MB gacha.</div><div class="formgrid"><div><label class="label">Eni (sm)</label><input type="number" id="customWidth" min="1" value="100" oninput="updateCustomCalc()"></div><div><label class="label">Bo‘yi (sm)</label><input type="number" id="customHeight" min="1" value="70" oninput="updateCustomCalc()"></div><div class="full"><label class="label">Material</label><select id="customMaterial" onchange="updateCustomCalc()"><option value="banner">Banner</option><option value="oracal">Orakal</option><option value="foamOracal">Fomeks + orakal</option><option value="glass">Orgsteklo stend</option><option value="alucobond">Alucobond</option><option value="oracalCut">Orakal reska</option><option value="oracalGoldBronze">Orakal reska — oltin va bronza</option><option value="acrylic">Akril</option><option value="acrylicGold">Akril — oltin rangli</option></select></div><div class="full"><label class="label">Reyka qo‘shish (har bir tomon alohida)</label><div class="checkrow"><label><input type="checkbox" id="crTop" onchange="updateCustomCalc()"> Yuqori</label><label><input type="checkbox" id="crBottom" onchange="updateCustomCalc()"> Pastki</label><label><input type="checkbox" id="crLeft" onchange="updateCustomCalc()"> Chap</label><label><input type="checkbox" id="crRight" onchange="updateCustomCalc()"> O‘ng</label></div><div class="formgrid" style="margin-top:8px"><div><label class="label">Qo‘shimcha gorizontal reyka (dona)</label><input id="crExtraH" type="number" min="0" value="0" oninput="updateCustomCalc()"></div><div><label class="label">Qo‘shimcha vertikal reyka (dona)</label><input id="crExtraV" type="number" min="0" value="0" oninput="updateCustomCalc()"></div></div></div><div class="full"><label class="label">Bold soni (dona)</label><input id="customBold" type="number" min="0" value="0" oninput="updateCustomCalc()"></div><div class="full"><label class="label">Izoh</label><textarea id="customNote" rows="2" placeholder="Dizayn bo‘yicha qo‘shimcha talablar..."></textarea></div></div><div class="calc-result"><div class="muted">Hisob-kitob natijasi</div><strong id="customTotal">0 so‘m</strong><div id="customBreakdown" class="mini-note"></div></div><button class="btn btn-gold" style="width:100%" onclick="addCustomDesignToCart()">Hisob-kitobni savatchaga qo‘shish</button></div></div>
+<div class="modal-backdrop" id="zoomModal" onclick="if(event.target===this)closeZoom()"><div class="modal"><div class="modal-head"><strong id="zoomHeading">Stend rasmi</strong><button class="close" onclick="closeZoom()">×</button></div><img id="zoomImage" class="zoom-image" alt="Katta stend rasmi"><div class="zoom-title" id="zoomName"></div><div class="muted" id="zoomInfo"></div><button class="btn btn-gold" style="width:100%;margin-top:14px" id="zoomChoose">O‘lchamini tanlash va narxini hisoblash</button></div></div>
+<div class="modal-backdrop" id="reminderModal"><div class="modal"><div class="modal-head"><strong>MUHIM ESLATMA!</strong><button class="close" onclick="closeReminder()">×</button></div><div class="notice" style="font-size:15px;margin-top:15px">Tanlangan buyurtmalaringizning barchasini imloviy xatolar va ko‘rinish jihatidan diqqat bilan tekshirib chiqing!</div><label style="display:flex;gap:10px;align-items:flex-start;font-weight:700;line-height:1.5"><input id="reminderCheck" type="checkbox" style="width:auto;margin-top:4px"> Barcha stendlarni tekshirib chiqdim va buyurtma berishga roziman.</label><button class="btn btn-gold" id="reminderConfirm" style="width:100%;margin-top:15px" disabled onclick="confirmReminder()">Tasdiqlash va buyurtmani yuborish</button><p class="muted">Tasdiqlash belgisi qo‘yilmasa, buyurtma yuborilmaydi.</p></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const DEFAULT_PRICES={banner:30000,oracal:50000,foamOracal:200000,glass:390000,alucobond:450000,oracalCut:100000,oracalGoldBronze:160000,acrylic:500000,acrylicGold:700000,reyka:10000,bold:8000,pockets:[{name:"A4 yupqa",price:6000},{name:"20×30 sm",price:15000},{name:"30×40 sm",price:30000},{name:"60×40 sm",price:55000},{name:"85×60 sm",price:100000}]};
+const KEYS={products:"sd_stend_products",prices:"sd_stend_prices",cart:"sd_stend_cart",orders:"sd_stend_orders",promo:"sd_stend_promo",materials:"sd_stend_materials"};
+let prices={...DEFAULT_PRICES,...load(KEYS.prices,DEFAULT_PRICES)},products=load(KEYS.products,[]),cart=load(KEYS.cart,[]),orders=load(KEYS.orders,[]),promo=load(KEYS.promo,{}),materials=load(KEYS.materials,[]),activeCategory="Barchasi",activeSubcategory="Barchasi",currentProduct=null,adminAuthed=false,pendingOrderForm=null;
+function load(k,d){try{let x=localStorage.getItem(k);return x?JSON.parse(x):JSON.parse(JSON.stringify(d))}catch(e){return d}}
+function save(k,v){
+ try{localStorage.setItem(k,JSON.stringify(v));return true}
+ catch(err){
+  console.error("Saqlashda xatolik:",err);
+  const msg="Brauzer xotirasi to‘lib qolgan yoki saqlashga ruxsat yo‘q. Katta rasm/fayllarni kichraytiring yoki brauzer xotirasini tekshiring. Ma’lumot saqlanmadi.";
+  if(!document.getElementById("storageWarning")){
+   const n=document.createElement("div");n.id="storageWarning";n.className="notice";n.style.position="sticky";n.style.top="62px";n.style.zIndex="30";n.textContent=msg;
+   document.querySelector("main.container")?.prepend(n);
+  }
+  alert(msg);return false;
+ }
+}
+function money(n){return Math.round(n||0).toLocaleString("uz-UZ")+" so‘m"}
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function showSection(id){["catalogSection","materialsSection","cartSection","adminSection"].forEach(x=>document.getElementById(x).classList.toggle("hidden",x!==id));if(id==="materialsSection")renderMaterials();if(id==="cartSection")renderCart();if(id==="adminSection")renderAdmin();window.scrollTo({top:0,behavior:"smooth"})}
+const SCHOOL_SUBS=["Koridor va foye","Matematika","Ona tili va adabiyot","Ingliz tili","Rus tili","Tarix","Geografiya","Biologiya","Fizika","Kimyo","Informatika","Boshlang‘ich ta’lim","Psixologiya","Astronomiya","Tasviriy san’at","Jismoniy tarbiya","Huquqshunoslik","CHQBT","Mehnat xavfsizligi","Burchaklar","Boshqa fanlar"];
+function productCats(p){let a=Array.isArray(p.categories)?p.categories:(p.category?[p.category]:[]);return a.map(x=>x==='Idora'?'Ofis':x)}
+function renderCategories(){let cats=["Barchasi","Maktab","Bog‘cha","Ofis","Tashkilot","Boshqa"];document.getElementById("categories").innerHTML=cats.map(c=>`<button class="chip ${activeCategory===c?"active":""}" onclick="activeCategory='${c}';activeSubcategory='Barchasi';renderCategories();renderProducts()">${c}</button>`).join("");let sub=document.getElementById("subcategories");if(activeCategory==="Maktab"){sub.classList.remove("hidden");let opts=["Barchasi",...SCHOOL_SUBS];sub.innerHTML=opts.map(x=>`<button class="chip ${activeSubcategory===x?"active":""}" onclick="activeSubcategory='${x}';renderCategories();renderProducts()">${x}</button>`).join("")}else{sub.classList.add("hidden");sub.innerHTML=""}}
+function renderProducts(){let q=(document.getElementById("searchInput")?.value||"").toLowerCase(),list=products.filter(p=>(activeCategory==="Barchasi"||productCats(p).includes(activeCategory))&&(activeCategory!=="Maktab"||activeSubcategory==="Barchasi"||(p.schoolSubs||[]).includes(activeSubcategory))&&(`${p.name} ${p.code} ${p.size}`).toLowerCase().includes(q));if(document.getElementById("sortSelect")?.value==="name")list.sort((a,b)=>a.name.localeCompare(b.name));let g=document.getElementById("productGrid");g.innerHTML=list.length?list.map(p=>`<article class="product"><div class="product-img" onclick="openZoom('${p.id}')">${p.image?`<img src="${p.image}" alt="${esc(p.name)}">`:`<div class="product-placeholder">SHOH DIZAYN<br>STEND</div>`}</div><div class="product-body"><h3>${esc(p.name)}</h3><div class="meta">${esc(productCats(p).join(", "))} • ${esc(p.code||"Kod berilmagan")}<br>${esc(p.size||"O‘lcham tanlanadi")}</div><div class="product-foot"><div class="pricehint">Narx kalkulyatorda hisoblanadi<b>O‘lchamga bog‘liq</b></div><button class="btn btn-dark" onclick="openConfig('${p.id}')">Tanlash</button></div></div></article>`).join(""):`<div class="empty">Hozircha katalogda stend yo‘q.<br><span class="muted">Admin panel orqali JPG rasmlarni yuklang.</span></div>`}
+function openZoom(id){let p=products.find(x=>String(x.id)===String(id));if(!p)return;document.getElementById("zoomHeading").textContent="Stendni ko‘rish";document.getElementById("zoomImage").src=p.image||"";document.getElementById("zoomImage").style.display=p.image?"block":"none";document.getElementById("zoomName").textContent=p.name;document.getElementById("zoomInfo").textContent=[productCats(p).join(", "),p.size||"O‘lcham tanlanadi",(p.schoolSubs||[]).join(", ")].filter(Boolean).join(" • ");document.getElementById("zoomChoose").onclick=()=>{closeZoom();openConfig(id)};document.getElementById("zoomModal").classList.add("show")}
+function closeZoom(){document.getElementById("zoomModal").classList.remove("show")}
+function pocketInputs(){document.getElementById("pockets").innerHTML=prices.pockets.map((p,i)=>`<div><label class="label">${esc(p.name)} • ${money(p.price)}</label><input type="number" min="0" value="0" id="pocket${i}" oninput="updateCalc()"></div>`).join("");const box=document.getElementById("pocketOptions"),btn=document.getElementById("pocketToggle");box.classList.add("hidden");btn.classList.remove("open");btn.setAttribute("aria-expanded","false");btn.textContent="＋ KARMASHKA"}
+function togglePockets(){const box=document.getElementById("pocketOptions"),btn=document.getElementById("pocketToggle"),opening=box.classList.contains("hidden");box.classList.toggle("hidden",!opening);btn.classList.toggle("open",opening);btn.setAttribute("aria-expanded",String(opening));btn.textContent=opening?"− KARMASHKA RAZMERLARI":"＋ KARMASHKA"}
+function openConfig(id){currentProduct=products.find(p=>String(p.id)===String(id));if(!currentProduct)return;document.getElementById("configTitle").textContent=currentProduct.name;document.getElementById("width").value=parseSize(currentProduct.size).w||100;document.getElementById("height").value=parseSize(currentProduct.size).h||150;document.getElementById("material").value="banner";document.getElementById("reyka").value=0;document.getElementById("bold").value=0;document.getElementById("quantity").value=1;pocketInputs();updateCalc();document.getElementById("configModal").classList.add("show")}
+function parseSize(s){let m=(s||"").match(/(\d+(?:[.,]\d+)?)\s*[×xх]\s*(\d+(?:[.,]\d+)?)/i);return m?{w:+m[1].replace(",", "."),h:+m[2].replace(",", ".")}:{}}
+function closeConfig(){document.getElementById("configModal").classList.remove("show")}
+function num(id){return Math.max(0,Number(document.getElementById(id).value)||0)}
+function pocketFit(){
+ const dims=[[21,29.7],[20,30],[30,40],[60,40],[85,60]];
+ const items=[];
+ prices.pockets.forEach((p,i)=>{const count=num("pocket"+i),d=dims[i]||[0,0];for(let k=0;k<count;k++)items.push({w:d[0],h:d[1],name:p.name});});
+ if(!items.length)return {ok:true,required:""};
+ const margin=5,gap=2,W=num("width")-2*margin,H=num("height")-2*margin;
+ if(W<=0||H<=0)return {ok:false,required:"Stend o‘lchami chetki bo‘sh joy uchun yetarli emas."};
+ // Shelf-packing check: try both orientations and sort larger pieces first.
+ function pack(rotate){
+  const list=items.map(x=>rotate?{w:x.h,h:x.w}:{w:x.w,h:x.h}).sort((a,b)=>b.h-a.h||b.w-a.w);
+  let y=0,rowH=0,x=0;
+  for(const item of list){
+   if(item.w>W||item.h>H)return false;
+   if(x>0&&x+gap+item.w>W){y+=rowH+gap;x=0;rowH=0;}
+   if(y+item.h>H)return false;
+   x+=(x?gap:0)+item.w;rowH=Math.max(rowH,item.h);
+  }
+  return true;
+ }
+ const ok=pack(false)||pack(true);
+ const a4=items.filter(x=>x.w===21).length;
+ return {ok,required:ok?"":`Tanlangan karmashkalar ${num("width")}×${num("height")} sm stendga sig‘maydi. Karmashka o‘lchamlarini yoki stend en-bo‘yini o‘zgartiring. Chetki bo‘sh joy: 5 sm, oraliq: 2 sm. ${a4?`A4 karmashka: ${a4} ta.`:""}`};
+}
+function updateCalc(){let fit=pocketFit();document.getElementById("pocketFitWarning").textContent=fit.required;document.getElementById("pocketFitWarning").classList.toggle("hidden",fit.ok);document.getElementById("addCartBtn").disabled=!fit.ok;let mat=document.getElementById("material").value,area=num("width")*num("height")/10000,qty=Math.max(1,num("quantity")),rate=prices[mat],base=area*rate,reyka=mat==="banner"?num("reyka")*prices.reyka:0,bold=["foamOracal","glass"].includes(mat)?num("bold")*prices.bold:0,pocket=prices.pockets.reduce((s,p,i)=>s+num("pocket"+i)*p.price,0),one=base+reyka+bold+pocket,total=one*qty;document.getElementById("reykaWrap").classList.toggle("hidden",mat!=="banner");document.getElementById("boldWrap").classList.toggle("hidden",!["foamOracal","glass"].includes(mat));document.getElementById("calcTotal").textContent=money(total);document.getElementById("calcBreakdown").textContent=`Maydon: ${area.toFixed(2)} m² • Material: ${money(base)} • Reyka: ${money(reyka)} • Bold: ${money(bold)} • Karmashka: ${money(pocket)} • Miqdor: ${qty}`}
+function addToCart(){if(!pocketFit().ok){alert(pocketFit().required);return}let mat=document.getElementById("material").value,area=num("width")*num("height")/10000,qty=Math.max(1,num("quantity")),pocketLines=prices.pockets.map((p,i)=>({name:p.name,qty:num("pocket"+i),price:p.price})).filter(x=>x.qty),reyka=mat==="banner"?num("reyka"):0,bold=["foamOracal","glass"].includes(mat)?num("bold"):0,rate=prices[mat],one=area*rate+reyka*prices.reyka+bold*prices.bold+pocketLines.reduce((s,p)=>s+p.qty*p.price,0);cart.push({id:"c"+Date.now(),productId:currentProduct.id,name:currentProduct.name,code:currentProduct.code||"",image:currentProduct.image||"",width:num("width"),height:num("height"),area,material:mat,materialName:{banner:"Banner",oracal:"Orakal",foamOracal:"Fomeks + orakal",glass:"Orgsteklo stend"}[mat],reyka,bold,pockets:pocketLines,qty,unitTotal:one,total:one*qty});save(KEYS.cart,cart);updateCartCount();closeConfig();alert("Stend savatchaga qo‘shildi!");}
+function updateCartCount(){document.getElementById("cartCount").textContent=cart.reduce((s,x)=>s+x.qty,0)}
+function renderCart(){let box=document.getElementById("cartLines"),empty=document.getElementById("cartEmpty");empty.classList.toggle("hidden",cart.length>0);box.innerHTML=cart.map((x,i)=>`<div class="cart-line"><div class="cart-thumb">${x.image?`<img src="${x.image}">`:"STEND"}</div><div><h4>${esc(x.name)}</h4><small>${x.width}×${x.height} sm • ${esc(x.materialName)} • ${x.area.toFixed(2)} m²</small><div class="cart-line-actions"><input class="qty" type="number" min="1" value="${x.qty}" onchange="changeQty(${i},this.value)"><button class="remove" onclick="removeCart(${i})">O‘chirish</button></div><small>${x.reyka?`Reyka ${x.reyka} m • `:""}${x.bold?`Bold ${x.bold} dona • `:""}${x.pockets.map(p=>`${p.name}: ${p.qty} dona`).join(", ")}${x.designFileName?` • Fayl: ${esc(x.designFileName)}`:""}</small></div><b>${money(x.total)}</b></div>`).join("");let sum=cart.reduce((s,x)=>s+x.total,0);document.getElementById("cartTotals").innerHTML=`<div class="total-row"><span>Stendlar soni</span><b>${cart.reduce((s,x)=>s+x.qty,0)} ta</b></div><div class="total-row"><span>Tanlangan mahsulotlar</span><b>${cart.length} tur</b></div><div class="total-row grand"><span>JAMI</span><span>${money(sum)}</span></div>`}
+function changeQty(i,v){let q=Math.max(1,parseInt(v)||1);cart[i].qty=q;cart[i].total=cart[i].unitTotal*q;save(KEYS.cart,cart);renderCart();updateCartCount()}
+function removeCart(i){cart.splice(i,1);save(KEYS.cart,cart);renderCart();updateCartCount()}
+function printQuote(){if(!cart.length){alert("Savatcha bo‘sh.");return}window.print()}
+function submitOrder(e){e.preventDefault();if(!cart.length){alert("Avval savatchaga stend qo‘shing.");return}pendingOrderForm={name:document.getElementById("custName").value,phone:document.getElementById("custPhone").value,org:document.getElementById("custOrg").value,note:document.getElementById("custNote").value};document.getElementById("reminderCheck").checked=false;document.getElementById("reminderConfirm").disabled=true;document.getElementById("reminderModal").classList.add("show")}
+function closeReminder(){document.getElementById("reminderModal").classList.remove("show");pendingOrderForm=null}
+document.getElementById("reminderCheck").addEventListener("change",e=>document.getElementById("reminderConfirm").disabled=!e.target.checked);
+function confirmReminder(){if(!document.getElementById("reminderCheck").checked||!pendingOrderForm)return;let order={number:"SD-"+new Date().getFullYear()+"-"+String(Date.now()).slice(-6),date:new Date().toLocaleString("uz-UZ"),...pendingOrderForm,items:cart,total:cart.reduce((s,x)=>s+x.total,0),status:"Yangi",customerConfirmedDesignCheck:true};orders.unshift(order);save(KEYS.orders,orders);cart=[];save(KEYS.cart,cart);updateCartCount();document.getElementById("checkoutForm").reset();document.getElementById("orderSuccess").classList.remove("hidden");document.getElementById("orderNumber").textContent="Buyurtma raqami: "+order.number+" • Jami: "+money(order.total);document.querySelector(".cart-layout").classList.add("hidden");document.getElementById("reminderModal").classList.remove("show");pendingOrderForm=null}
+function loginAdmin(){if(document.getElementById("adminPassword").value==="shoh2026"){adminAuthed=true;document.getElementById("adminLogin").classList.add("hidden");document.getElementById("adminDashboard").classList.remove("hidden");renderAdmin()}else alert("Parol noto‘g‘ri. Demo parol: shoh2026")}
+function renderAdmin(){if(!adminAuthed)return;renderAdminProducts();renderPriceInputs();renderPromoForm();renderOrders();renderAdminMaterials()}
+function adminTab(id,btn){["productsAdmin","promoAdmin","pricesAdmin","ordersAdmin","materialsAdmin"].forEach(x=>document.getElementById(x).classList.toggle("hidden",x!==id));document.querySelectorAll(".admin-tab").forEach(x=>x.classList.remove("active"));btn.classList.add("active");if(id==="ordersAdmin")renderOrders();if(id==="materialsAdmin")renderAdminMaterials()}
+function saveProduct(e){e.preventDefault();let id=document.getElementById("editId").value||"p"+Date.now(),old=products.find(x=>x.id===id),file=document.getElementById("pImage").files[0],categories=[...document.querySelectorAll("#pCategories input:checked")].map(x=>x.value),schoolSubs=[...document.querySelectorAll("#pSchoolSubs input:checked")].map(x=>x.value);if(!categories.length){alert("Kamida bitta kategoriya tanlang.");return}let data={id,name:document.getElementById("pName").value,code:document.getElementById("pCode").value,categories,category:categories[0],schoolSubs:categories.includes("Maktab")?schoolSubs:[],size:document.getElementById("pSize").value,image:old?.image||""};function done(){if(old)products=products.map(x=>x.id===id?data:x);else products.unshift(data);save(KEYS.products,products);resetProductForm();renderAdminProducts();renderProducts();renderPromoForm()}if(file){let r=new FileReader();r.onload=()=>{data.image=r.result;done()};r.readAsDataURL(file)}else done()}
+function resetProductForm(){document.getElementById("productForm").reset();document.getElementById("editId").value="";document.querySelectorAll("#pCategories input,#pSchoolSubs input").forEach(x=>x.checked=false)}
+function editProduct(id){let p=products.find(x=>String(x.id)===String(id));if(!p)return;document.getElementById("editId").value=p.id;document.getElementById("pName").value=p.name;document.getElementById("pCode").value=p.code;document.querySelectorAll("#pCategories input").forEach(x=>x.checked=productCats(p).includes(x.value));document.querySelectorAll("#pSchoolSubs input").forEach(x=>x.checked=(p.schoolSubs||[]).includes(x.value));document.getElementById("pSize").value=p.size;document.getElementById("productsAdmin").scrollIntoView({behavior:"smooth"})}
+function deleteProduct(id){if(!confirm("Ushbu stendni o‘chirasizmi?"))return;products=products.filter(x=>x.id!==id);save(KEYS.products,products);renderAdminProducts();renderProducts();renderPromoForm()}
+function renderAdminProducts(){document.getElementById("adminProductList").innerHTML=products.length?products.map(p=>`<div class="admin-row"><div><strong>${esc(p.name)}</strong><small>${esc(productCats(p).join(", "))} • ${esc(p.code)}</small></div><div><button class="btn btn-light" onclick="editProduct('${p.id}')">Tahrir</button> <button class="btn btn-danger" onclick="deleteProduct('${p.id}')">×</button></div></div>`).join(""):"<p class='muted'>Hali mahsulot kiritilmagan.</p>"}
+function renderPromoForm(){document.getElementById("promoTitle").value=promo.title||"Siz uchun zamonaviy stendlar";document.getElementById("promoText").value=promo.text||"Maktab, bog‘cha, ofis va tashkilotlar uchun sifatli stendlar.";document.getElementById("promoProduct").innerHTML='<option value="">Faqat reklama matni</option>'+products.map(p=>`<option value="${p.id}">${esc(p.name)}</option>`).join("");document.getElementById("promoProduct").value=promo.productId||""}
+function savePromo(){let f=document.getElementById("promoImage").files[0],data={title:document.getElementById("promoTitle").value,text:document.getElementById("promoText").value,productId:document.getElementById("promoProduct").value,image:promo.image||""};function done(){promo=data;save(KEYS.promo,promo);renderHero();alert("Reklama saqlandi.")}if(f){let r=new FileReader();r.onload=()=>{data.image=r.result;done()};r.readAsDataURL(f)}else done()}
+function renderHero(){document.getElementById("heroTitle").textContent=promo.title||"Siz uchun zamonaviy stendlar";document.getElementById("heroText").textContent=promo.text||"Maktab, bog‘cha, ofis va tashkilotlar uchun sifatli stendlar. O‘zingizga mos material va o‘lchamni tanlang.";document.getElementById("heroArt").innerHTML=promo.image?`<img src="${promo.image}" alt="Reklama" onclick="promo.productId?openConfig(promo.productId):document.getElementById('catalogSection').scrollIntoView({behavior:'smooth'})">`:`<div class="hero-placeholder" onclick="promo.productId?openConfig(promo.productId):document.getElementById('catalogSection').scrollIntoView({behavior:'smooth'})">SIZNING STENDINGIZ<br><span style="font-size:11px">REKLAMA JOYI</span></div>`}
+function renderPriceInputs(){let names={banner:"Banner — 1 m²",oracal:"Orakal — 1 m²",foamOracal:"Fomeks + orakal — 1 m²",glass:"Orgsteklo — 1 m²",alucobond:"Alucobond — 1 m²",oracalCut:"Orakal reska — 1 m²",oracalGoldBronze:"Orakal reska, oltin va bronza — 1 m²",acrylic:"Akril — 1 m²",acrylicGold:"Akril, oltin rangli — 1 m²",reyka:"Reyka — 1 metr",bold:"Bold — 1 dona"};let h=Object.keys(names).map(k=>`<div><label class="label">${names[k]}</label><input type="number" min="0" id="price_${k}" value="${prices[k]}"></div>`).join("");h+=prices.pockets.map((p,i)=>`<div><label class="label">Karmashka ${p.name}</label><input type="number" min="0" id="pocketPrice_${i}" value="${p.price}"></div>`).join("");document.getElementById("priceInputs").innerHTML=h}
+function savePrices(){["banner","oracal","foamOracal","glass","alucobond","oracalCut","oracalGoldBronze","acrylic","acrylicGold","reyka","bold"].forEach(k=>prices[k]=Math.max(0,Number(document.getElementById("price_"+k).value)||0));prices.pockets=prices.pockets.map((p,i)=>({...p,price:Math.max(0,Number(document.getElementById("pocketPrice_"+i).value)||0)}));save(KEYS.prices,prices);alert("Narxlar saqlandi.")}
+function renderOrders(){document.getElementById("orderList").innerHTML=orders.length?orders.map(o=>`<div class="order-card"><div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><h4>${esc(o.number)} <span class="badge">${esc(o.status)}</span></h4><b>${money(o.total)}</b></div><div class="meta">${esc(o.date)} • ${esc(o.name)} • ${esc(o.phone)} • ${esc(o.org)}</div><p class="muted">${o.items.map(x=>`${esc(x.name)} (${x.width}×${x.height} sm, ${esc(x.materialName)}, ${x.qty} ta)`).join("<br>")}</p><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><select style="max-width:170px" onchange="changeOrderStatus('${o.number}',this.value)">${["Yangi","Jarayonda","Tayyor","Topshirildi","Bekor qilindi"].map(s=>`<option ${o.status===s?"selected":""}>${s}</option>`).join("")}</select><button class="btn btn-light" onclick="alert('Telefon: ${esc(o.phone)}')">Telefon</button></div></div>`).join(""):"<p class='muted'>Hozircha buyurtma kelmagan.</p>"}
+function changeOrderStatus(n,s){let o=orders.find(x=>x.number===n);if(o){o.status=s;save(KEYS.orders,orders);renderOrders()}}
+function exportOrders(){let rows=[["Buyurtma raqami","Sana","Mijoz","Telefon","Tashkilot","Stend","O‘lcham","Material","Miqdor","Jami","Holat"]];orders.forEach(o=>o.items.forEach(x=>rows.push([o.number,o.date,o.name,o.phone,o.org,x.name,`${x.width}x${x.height}`,x.materialName,x.qty,x.total,o.status])));let csv="\ufeff"+rows.map(r=>r.map(v=>'"'+String(v??"").replace(/"/g,'""')+'"').join(";")).join("\n");let a=document.createElement("a");a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv;charset=utf-8"}));a.download="shoh_dizayn_buyurtmalar.csv";a.click();URL.revokeObjectURL(a.href)}
+function clearOrders(){if(confirm("Barcha buyurtmalarni o‘chirishni tasdiqlaysizmi?")){orders=[];save(KEYS.orders,orders);renderOrders()}}
+renderCategories();renderProducts();renderHero();updateCartCount();
+
+// --- Qo‘shimcha imkoniyatlar: bitta HTML ichida mijoz + Admin ---
+const _legacySaveProduct=saveProduct;
+function nextProductCode(){let n=Number(localStorage.getItem('sd_stend_next_code')||1);let used=new Set(products.map(x=>x.code));while(used.has('SD-'+String(n).padStart(4,'0')))n++;localStorage.setItem('sd_stend_next_code',String(n+1));return 'SD-'+String(n).padStart(4,'0')}
+saveProduct=function(e){e.preventDefault();let id=document.getElementById('editId').value||'p'+Date.now(),old=products.find(x=>String(x.id)===String(id)),file=document.getElementById('pImage').files[0],categories=[...document.querySelectorAll('#pCategories input:checked')].map(x=>x.value),schoolSubs=[...document.querySelectorAll('#pSchoolSubs input:checked')].map(x=>x.value);if(!categories.length){alert('Kamida bitta kategoriya tanlang.');return}let code=old?.code||nextProductCode();let data={id,name:document.getElementById('pName').value.trim(),code,categories,category:categories[0],schoolSubs:categories.includes('Maktab')?schoolSubs:[],size:document.getElementById('pSize').value,image:old?.image||''};function done(){if(old)products=products.map(x=>x.id===id?data:x);else products.unshift(data);save(KEYS.products,products);document.getElementById('pCode').value='';resetProductForm();renderAdminProducts();renderProducts();renderPromoForm()}if(file){let r=new FileReader();r.onload=()=>{data.image=r.result;done()};r.readAsDataURL(file)}else done()};
+renderCategories=function(){let cats=['Barchasi','Maktab','Bog‘cha','Ofis','Tashkilot','Boshqa'];document.getElementById('categories').innerHTML=cats.map(c=>`<button class="chip ${activeCategory===c?'active':''}" onclick="activeCategory='${c}';activeSubcategory='Barchasi';renderCategories();renderProducts()">${c}</button>`).join('');let sub=document.getElementById('subcategories');if(activeCategory==='Maktab'){sub.classList.remove('hidden');sub.innerHTML=['Barchasi',...SCHOOL_SUBS].map(x=>`<button class="chip ${activeSubcategory===x?'active':''}" onclick="activeSubcategory='${x}';renderCategories();renderProducts()">${x}</button>`).join('')}else{sub.classList.add('hidden');sub.innerHTML=''}};
+renderAdminProducts=function(){let q=(document.getElementById('adminProductSearch')?.value||'').toLowerCase();let list=products.filter(p=>(p.name+' '+p.code).toLowerCase().includes(q));document.getElementById('adminProductList').innerHTML=list.length?list.map(p=>`<div class="admin-row"><div><strong>${esc(p.name)}</strong><small>${esc(productCats(p).join(', '))} • ${esc(p.code)} • ${esc(p.size||'')}</small></div><div><button class="btn btn-light" onclick="editProduct('${p.id}')">Tahrir</button> <button class="btn btn-danger" onclick="deleteProduct('${p.id}')">×</button></div></div>`).join(''):'<p class="muted">Mos stend topilmadi.</p>'};
+function openCustomDesign(){document.getElementById('customDesignModal').classList.add('show');document.getElementById('customFile').value='';document.getElementById('customFileInfo').textContent='JPG, PNG, WEBP, PDF, CDR, AI, PSD yoki ZIP. Demo rejimida fayl hajmi 2 MB gacha.';updateCustomCalc()}
+function closeCustomDesign(){document.getElementById('customDesignModal').classList.remove('show')}
+function updateCustomCalc(){let w=Math.max(0,Number(document.getElementById('customWidth').value)||0),h=Math.max(0,Number(document.getElementById('customHeight').value)||0),mat=document.getElementById('customMaterial').value,area=w*h/10000,reyka=0;if(document.getElementById('crTop').checked)reyka+=w/100;if(document.getElementById('crBottom').checked)reyka+=w/100;if(document.getElementById('crLeft').checked)reyka+=h/100;if(document.getElementById('crRight').checked)reyka+=h/100;reyka+=Math.max(0,Number(document.getElementById('crExtraH').value)||0)*w/100+Math.max(0,Number(document.getElementById('crExtraV').value)||0)*h/100;let bold=Math.max(0,Number(document.getElementById('customBold').value)||0),total=area*(prices[mat]||0)+reyka*prices.reyka+bold*prices.bold;document.getElementById('customTotal').textContent=money(total);document.getElementById('customBreakdown').textContent=`Maydon: ${area.toFixed(2)} m² • Material: ${money(area*(prices[mat]||0))} • Reyka: ${reyka.toFixed(2)} m (${money(reyka*prices.reyka)}) • Bold: ${bold} dona`}
+function addCustomDesignToCart(){let f=document.getElementById('customFile').files[0];if(!f){alert('Iltimos, dizayn faylini yuklang.');return}if(f.size>2*1024*1024){alert('Bitta HTML demo rejimida fayl hajmi 2 MB dan oshmasin. Katta fayllar serverga yuklanadi.');return}let w=Number(document.getElementById('customWidth').value),h=Number(document.getElementById('customHeight').value);if(!(w>0&&h>0)){alert('Eni va bo‘yini to‘g‘ri kiriting.');return}let mat=document.getElementById('customMaterial').value,area=w*h/10000,reyka=0,edges=[];[['crTop','Yuqori'],['crBottom','Pastki'],['crLeft','Chap'],['crRight','O‘ng']].forEach(([id,n])=>{if(document.getElementById(id).checked){edges.push(n);reyka+=(id==='crTop'||id==='crBottom'?w:h)/100}});let eh=Math.max(0,Number(document.getElementById('crExtraH').value)||0),ev=Math.max(0,Number(document.getElementById('crExtraV').value)||0);reyka+=eh*w/100+ev*h/100;let bold=Math.max(0,Number(document.getElementById('customBold').value)||0),unit=area*prices[mat]+reyka*prices.reyka+bold*prices.bold;let reader=new FileReader();reader.onload=()=>{let item={id:'custom'+Date.now(),productId:'custom',name:'Mijozning o‘z dizayni',code:'MIJOZ-FAYLI',image:(f.type.startsWith('image/')?reader.result:''),designFile:reader.result,designFileName:f.name,designFileType:f.type||'application/octet-stream',designNote:document.getElementById('customNote').value,width:w,height:h,area,material:mat,materialName:{banner:'Banner',oracal:'Orakal',foamOracal:'Fomeks + orakal',glass:'Orgsteklo stend',alucobond:'Alucobond',oracalCut:'Orakal reska',oracalGoldBronze:'Orakal reska — oltin va bronza',acrylic:'Akril',acrylicGold:'Akril — oltin rangli'}[mat],reyka,reykaEdges:edges,extraHorizontal:eh,extraVertical:ev,bold,pockets:[],qty:1,unitTotal:unit,total:unit};cart.push(item);save(KEYS.cart,cart);updateCartCount();closeCustomDesign();alert('Dizayn va hisob-kitob savatchaga qo‘shildi.')};reader.readAsDataURL(f)}
+// Per-side reyka controls are added to the standard product calculator.
+(function addReykaControls(){let wrap=document.getElementById('reykaWrap');if(!wrap)return;wrap.classList.remove('hidden');wrap.innerHTML=`<label class="label">Reyka — tomonlarni alohida tanlang</label><div class="checkrow"><label><input type="checkbox" id="rTop" onchange="updateCalc()"> Yuqori</label><label><input type="checkbox" id="rBottom" onchange="updateCalc()"> Pastki</label><label><input type="checkbox" id="rLeft" onchange="updateCalc()"> Chap</label><label><input type="checkbox" id="rRight" onchange="updateCalc()"> O‘ng</label></div><div class="formgrid" style="margin-top:8px"><div><label class="label">Qo‘shimcha gorizontal (dona)</label><input type="number" id="rExtraH" min="0" value="0" oninput="updateCalc()"></div><div><label class="label">Qo‘shimcha vertikal (dona)</label><input type="number" id="rExtraV" min="0" value="0" oninput="updateCalc()"></div></div><div class="mini-note" id="reykaMeters"></div>`})();
+openConfig=function(id){currentProduct=products.find(p=>String(p.id)===String(id));if(!currentProduct)return;document.getElementById('configTitle').textContent=currentProduct.name;let sz=parseSize(currentProduct.size);document.getElementById('width').value=sz.w||100;document.getElementById('height').value=sz.h||150;document.getElementById('material').value='banner';document.getElementById('bold').value=0;document.getElementById('quantity').value=1;['rTop','rBottom','rLeft','rRight'].forEach(x=>document.getElementById(x).checked=false);['rExtraH','rExtraV'].forEach(x=>document.getElementById(x).value=0);pocketInputs();updateCalc();document.getElementById('configModal').classList.add('show')};
+updateCalc=function(){let w=Math.max(0,num('width')),h=Math.max(0,num('height')),mat=document.getElementById('material').value,area=w*h/10000,qty=Math.max(1,num('quantity')),reyka=0;[['rTop','h'],['rBottom','h'],['rLeft','v'],['rRight','v']].forEach(([id,d])=>{if(document.getElementById(id)?.checked)reyka+=(d==='h'?w:h)/100});reyka+=Math.max(0,num('rExtraH'))*w/100+Math.max(0,num('rExtraV'))*h/100;let bold=['foamOracal','glass'].includes(mat)?num('bold'):0,pocketLines=prices.pockets.map((p,i)=>({name:p.name,qty:num('pocket'+i),price:p.price})).filter(x=>x.qty),one=area*prices[mat]+reyka*prices.reyka+bold*prices.bold+pocketLines.reduce((s,p)=>s+p.qty*p.price,0),total=one*qty;document.getElementById('reykaWrap').classList.toggle('hidden',mat!=='banner');document.getElementById('boldWrap').classList.toggle('hidden',!['foamOracal','glass'].includes(mat));document.getElementById('reykaMeters').textContent=`Tanlangan reyka: ${reyka.toFixed(2)} metr`;document.getElementById('calcTotal').textContent=money(total);document.getElementById('calcBreakdown').textContent=`Maydon ${area.toFixed(2)} m² × ${money(prices[mat])} • Reyka ${reyka.toFixed(2)} m • ${qty} dona`;let fit=pocketFit();document.getElementById('pocketFitWarning').classList.toggle('hidden',fit.ok);document.getElementById('pocketFitWarning').textContent=fit.ok?'':fit.required;document.getElementById('addCartBtn').disabled=!fit.ok};
+addToCart=function(){let fit=pocketFit();if(!fit.ok){alert(fit.required);return}let mat=document.getElementById('material').value,area=num('width')*num('height')/10000,qty=Math.max(1,num('quantity')),pocketLines=prices.pockets.map((p,i)=>({name:p.name,qty:num('pocket'+i),price:p.price})).filter(x=>x.qty),reyka=0,edges=[];[['rTop','Yuqori','h'],['rBottom','Pastki','h'],['rLeft','Chap','v'],['rRight','O‘ng','v']].forEach(([id,n,d])=>{if(document.getElementById(id).checked){edges.push(n);reyka+=(d==='h'?num('width'):num('height'))/100}});let eh=num('rExtraH'),ev=num('rExtraV');reyka=mat==='banner'?(reyka+eh*num('width')/100+ev*num('height')/100):0;let bold=['foamOracal','glass'].includes(mat)?num('bold'):0,one=area*prices[mat]+reyka*prices.reyka+bold*prices.bold+pocketLines.reduce((s,p)=>s+p.qty*p.price,0);cart.push({id:'c'+Date.now(),productId:currentProduct.id,name:currentProduct.name,code:currentProduct.code||'',image:currentProduct.image||'',width:num('width'),height:num('height'),area,material:mat,materialName:{banner:'Banner',oracal:'Orakal',foamOracal:'Fomeks + orakal',glass:'Orgsteklo stend',alucobond:'Alucobond',oracalCut:'Orakal reska',oracalGoldBronze:'Orakal reska — oltin va bronza',acrylic:'Akril',acrylicGold:'Akril — oltin rangli'}[mat],reyka,reykaEdges:edges,extraHorizontal:eh,extraVertical:ev,bold,pockets:pocketLines,qty,unitTotal:one,total:one*qty});save(KEYS.cart,cart);updateCartCount();closeConfig();alert('Stend savatchaga qo‘shildi!')};
+// Mijoz buyurtmasi yuborilganda buyurtma rasmlari va fayllari shu HTML brauzer xotirasida qoladi.
+renderOrders=function(){let box=document.getElementById('orderList');if(!box)return;box.innerHTML=orders.length?orders.map(o=>{let rows=(o.items||[]).map(x=>`<tr><td><div class="order-product">${x.image?`<img class="order-photo" src="${esc(x.image)}" alt="${esc(x.name)}" title="Katta ko‘rish uchun bosing" onclick="openOrderImage(this.src, this.alt)" onerror="this.style.display='none'">`:'<div class="order-photo"></div>'}<div><b>${esc(x.name)}</b><br><small>${esc(x.code||'')}</small>${x.designNote?`<br><small>${esc(x.designNote)}</small>`:''}</div></div></td><td>${x.width}×${x.height} sm</td><td>${esc(x.materialName||'')}</td><td>${x.qty}</td><td>${money(x.unitTotal)}</td><td>${money(x.total)}</td></tr>`).join('');const phone=String(o.phone||'');const digits=phone.replace(/\D/g,'');const tel=digits.length===9?'+998'+digits:(digits.startsWith('998')?'+'+digits:phone);return `<div class="order-card"><div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><h4>${esc(o.number)} <span class="badge">${esc(o.status)}</span></h4><b>${money(o.total)}</b></div><div class="meta">${esc(o.date)} • ${esc(o.name)} • ${esc(phone)} • ${esc(o.org||'')}</div>${o.note?`<p class="muted">Izoh: ${esc(o.note)}</p>`:''}<div style="overflow:auto"><table class="order-items"><thead><tr><th>Stend / rasm / SD kodi</th><th>Razmer</th><th>Material</th><th>Soni</th><th>Bir donasi</th><th>Jami</th></tr></thead><tbody>${rows}</tbody></table></div><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px"><select id="orderStatus-${esc(o.number)}" style="max-width:190px">${['Yangi','Jarayonda','Tayyor','Topshirildi','Bekor qilindi'].map(v=>`<option value="${v}" ${o.status===v?'selected':''}>${v}</option>`).join('')}</select><button class="btn btn-gold" type="button" onclick="saveOrderStatusFromCard('${esc(o.number)}')">Holatni saqlash</button><a class="btn btn-light" href="tel:${esc(tel)}">Qo‘ng‘iroq qilish</a><button class="btn btn-light" type="button" onclick="copyOrderPhone('${esc(phone)}')">Raqamni nusxalash</button><button class="btn btn-light" type="button" onclick="printAdminOrder('${esc(o.number)}')">PDF / Chop etish</button><button class="btn btn-light" type="button" style="border-color:#d9534f;color:#b42318" onclick="deleteAdminOrder('${esc(o.number)}',this)">Buyurtmani o‘chirish</button></div><div id="orderMsg-${esc(o.number)}" class="mini-note" aria-live="polite"></div></div>`}).join(''):'<p class="muted">Hozircha buyurtma kelmagan.</p>'};
+printQuote=function(){if(!cart.length){alert('Savatcha bo‘sh.');return}let total=cart.reduce((a,x)=>a+x.total,0);let rows=cart.map((x,i)=>`<tr><td>${i+1}</td><td>${esc(x.code||'MIJOZ-FAYLI')}</td><td>${esc(x.name)}</td><td>${x.width}×${x.height} sm</td><td>${esc(x.materialName||'')}</td><td>${x.qty}</td><td>${money(x.unitTotal)}</td><td>${money(x.total)}</td></tr>`).join('');let el=document.getElementById('quotePrintArea');el.innerHTML=`<h2>SHOH DIZAYN — BUYURTMA HISOBOTI</h2><div>Yaratilgan sana: ${new Date().toLocaleString('uz-UZ')}</div><table><thead><tr><th>№</th><th>SD kodi</th><th>Stend nomi</th><th>Razmeri</th><th>Material</th><th>Soni</th><th>Bir donasi narxi</th><th>Jami narxi</th></tr></thead><tbody>${rows}</tbody></table><div class="print-total">UMUMIY SUMMA: ${money(total)}</div><p>Murojaat uchun: 88 605 52 52</p>`;window.print()};
+
+// Bulutdagi mahsulot/materiallarni jismonan o‘chirmaymiz: is_active=false qilib arxivlaymiz.
+deleteProduct=async function(id){
+  const item=products.find(x=>String(x.id)===String(id)); if(!item)return;
+  if(!confirm('Ushbu stendni katalogdan yashirishni tasdiqlaysizmi? Buyurtma tarixi saqlanadi.'))return;
+  if(!adminAuthed){alert('Avval Admin sifatida kiring.');return;}
+  try{
+    const {error}=await sdDb.from('products').update({is_active:false}).eq('id',id);
+    if(error)throw error;
+    products=products.filter(x=>String(x.id)!==String(id));
+    save(KEYS.products,products);renderAdminProducts();renderProducts();renderPromoForm();
+    sdToast('Mahsulot katalogdan yashirildi. Buyurtma tarixi saqlandi.',true);
+  }catch(e){console.error(e);alert('Mahsulot yashirilmadi: '+e.message);}
+};
+deleteMaterial=async function(id){
+  const item=materials.find(x=>String(x.id)===String(id)); if(!item)return;
+  if(!confirm('Ushbu materialni katalogdan yashirishni tasdiqlaysizmi?'))return;
+  if(!adminAuthed){alert('Avval Admin sifatida kiring.');return;}
+  try{
+    const {error}=await sdDb.from('materials').update({is_active:false}).eq('id',id);
+    if(error)throw error;
+    materials=materials.filter(x=>String(x.id)!==String(id));
+    save(KEYS.materials,materials);renderAdminMaterials();renderMaterials();
+    sdToast('Material katalogdan yashirildi.',true);
+  }catch(e){console.error(e);alert('Material yashirilmadi: '+e.message);}
+};
+
+// Materiallar katalogi: alohida ko‘rish sahifasi va Admin tomonidan boshqarish.
+function renderMaterials(){let g=document.getElementById('materialCatalogGrid');if(!g)return;g.innerHTML=materials.length?materials.map(m=>`<article class="material-card" onclick="openMaterialDetail('${m.id}')"><img src="${m.image}" alt="${esc(m.name)}"><div class="product-body"><h3>${esc(m.name)}</h3><div class="meta">${esc(m.short||'Batafsil ma’lumotni ko‘rish')}</div><div class="product-foot"><span class="pricehint">Batafsil ko‘rish</span><button class="btn btn-dark" type="button">Ko‘rish</button></div></div></article>`).join(''):'<div class="empty">Materiallar hali kiritilmagan. Tez orada bu yerda material namunalari joylashtiriladi.</div>'}
+function openMaterialDetail(id){let m=materials.find(x=>x.id===id);if(!m)return;document.getElementById('materialDetailName').textContent=m.name;document.getElementById('materialDetailShort').textContent=m.short||'';document.getElementById('materialDetailDescription').textContent=m.description||'';let imgs=[m.image,...(m.gallery||[]),m.preview3d].filter(Boolean);document.getElementById('materialDetailImages').innerHTML=imgs.map((src,i)=>`<img src="${src}" alt="${esc(m.name)} namunasi ${i+1}" onclick="window.open(this.src,'_blank')">`).join('');document.getElementById('materialDetailModal').classList.add('show')}
+function closeMaterialDetail(){document.getElementById('materialDetailModal').classList.remove('show')}
+function readImage(file){return new Promise((resolve,reject)=>{if(!file){resolve('');return}let r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=reject;r.readAsDataURL(file)})}
+async function saveMaterial(e){e.preventDefault();let id=document.getElementById('materialEditId').value||'mat'+Date.now(),old=materials.find(x=>x.id===id),main=document.getElementById('materialImage').files[0],gallery=[...document.getElementById('materialGallery').files],preview=document.getElementById('material3d').files[0];if(!old&&!main){alert('Asosiy material rasmini yuklang.');return}let image=main?await readImage(main):(old?.image||''),galleryData=gallery.length?await Promise.all(gallery.map(readImage)):(old?.gallery||[]),preview3d=preview?await readImage(preview):(old?.preview3d||'');let item={id,name:document.getElementById('materialName').value.trim(),short:document.getElementById('materialShort').value.trim(),description:document.getElementById('materialDescription').value.trim(),image,gallery:galleryData,preview3d};if(old)materials=materials.map(x=>x.id===id?item:x);else materials.unshift(item);save(KEYS.materials,materials);resetMaterialForm();renderAdminMaterials();renderMaterials();alert('Material saqlandi.')}
+function resetMaterialForm(){document.getElementById('materialForm').reset();document.getElementById('materialEditId').value=''}
+function renderAdminMaterials(){let box=document.getElementById('adminMaterialList');if(!box)return;box.innerHTML=materials.length?materials.map(m=>`<div class="admin-row"><div style="display:flex;gap:10px;align-items:center"><img src="${m.image}" style="width:64px;height:48px;object-fit:cover;border-radius:7px"><div><strong>${esc(m.name)}</strong><small>${esc(m.short||'')}</small></div></div><div><button class="btn btn-light" onclick="editMaterial('${m.id}')">Tahrirlash</button> <button class="btn btn-danger" onclick="deleteMaterial('${m.id}')">O‘chirish</button></div></div>`).join(''):'<p class="muted">Materiallar hali kiritilmagan.</p>'}
+function editMaterial(id){let m=materials.find(x=>x.id===id);if(!m)return;document.getElementById('materialEditId').value=m.id;document.getElementById('materialName').value=m.name;document.getElementById('materialShort').value=m.short||'';document.getElementById('materialDescription').value=m.description||'';document.getElementById('materialsAdmin').scrollIntoView({behavior:'smooth'})}
+function deleteMaterial(id){if(!confirm('Ushbu materialni o‘chirishni tasdiqlaysizmi?'))return;materials=materials.filter(x=>x.id!==id);save(KEYS.materials,materials);renderAdminMaterials();renderMaterials()}
+
+
+// --- Buyurtma tugmalari va sahifalararo holatni barqarorlashtirish ---
+(function hardenOrderFlow(){
+  // Boshqa bo‘limdan savatchaga qaytilganda eski muvaffaqiyat oynasi yashirilsin
+  // va savatcha formasi qayta ochilsin. Bu ikkinchi/uchinchi buyurtmada ham ishlaydi.
+  const _showSection = showSection;
+  showSection = function(id){
+    _showSection(id);
+    if(id === "cartSection"){
+      document.querySelector("#cartSection .cart-layout")?.classList.remove("hidden");
+      document.getElementById("orderSuccess")?.classList.add("hidden");
+      renderCart();
+    }
+  };
+
+  // Mahsulot kalkulyatoridagi tugma har safar joriy mahsulot bilan ishlashini tekshirish.
+  const _addToCart = addToCart;
+  addToCart = function(){
+    if(!currentProduct || !products.some(p => p.id === currentProduct.id)){
+      alert("Stend tanlanmagan. Katalogdan stendni qayta tanlang.");
+      closeConfig();
+      return;
+    }
+    _addToCart();
+  };
+
+  // Bir buyurtma ikki marta yuborilib ketmasin.
+  const _confirmReminder = confirmReminder;
+  let submitting = false;
+  confirmReminder = function(){
+    if(submitting) return;
+    if(!pendingOrderForm || !cart.length){
+      alert("Buyurtma ma’lumotlari topilmadi. Savatchani tekshirib, qayta urinib ko‘ring.");
+      closeReminder();
+      return;
+    }
+    submitting = true;
+    const btn = document.getElementById("reminderConfirm");
+    if(btn) btn.disabled = true;
+    try{
+      _confirmReminder();
+    } finally {
+      submitting = false;
+      if(btn && document.getElementById("reminderModal").classList.contains("show")){
+        btn.disabled = !document.getElementById("reminderCheck").checked;
+      }
+    }
+  };
+
+  // Mijoz buyurtma tugmasini bosganda savatcha va forma holati tekshirilsin.
+  const _submitOrder = submitOrder;
+  submitOrder = function(e){
+    if(e) e.preventDefault();
+    if(!Array.isArray(cart) || cart.length === 0){
+      alert("Avval katalogdan stend tanlab, savatchaga qo‘shing.");
+      return;
+    }
+    const name = document.getElementById("custName").value.trim();
+    const phone = document.getElementById("custPhone").value.trim();
+    if(!name || !phone){
+      alert("Ism va telefon raqamini kiriting.");
+      return;
+    }
+    _submitOrder(e);
+  };
+
+  // Buyurtma tasdiqlangach, navbatdagi buyurtma uchun sahifa holatini tozalash.
+  const _originalConfirm = confirmReminder;
+  confirmReminder = function(){
+    const before = orders.length;
+    _originalConfirm();
+    if(orders.length > before){
+      document.querySelector("#cartSection .cart-layout")?.classList.add("hidden");
+      document.getElementById("orderSuccess")?.classList.remove("hidden");
+      renderCart();
+    }
+  };
+
+  // Barcha katalog va admin tugmalarini standart button holatiga keltirish;
+  // form yuborish vazifasi bor tugmalar bundan mustasno.
+  document.querySelectorAll("button:not([type])").forEach(b => {
+    if(!b.closest("form")) b.type = "button";
+  });
+})();
+
+
+
+// ===== SHOH DIZAYN STEND ONLINE: Supabase ulanish qatlami =====
+// Faqat publishable kalit ishlatiladi. Secret/service_role kalitini brauzerga qo'ymang.
+const SD_SUPABASE_URL = 'https://ijuwdixauktwfdlbupxo.supabase.co';
+const SD_SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_DRkPcNzijtJARxQKX5XmnQ_mbPaijzM';
+const sdDb = window.supabase.createClient(SD_SUPABASE_URL, SD_SUPABASE_PUBLISHABLE_KEY);
+window.sdDb = sdDb;
+let sdOnlineReady = false;
+
+function sdToast(message, ok=false){
+  const n=document.createElement('div'); n.className='notice'+(ok?' success':''); n.textContent=message;
+  n.style.position='fixed'; n.style.left='50%'; n.style.bottom='18px'; n.style.transform='translateX(-50%)'; n.style.zIndex='999'; n.style.maxWidth='min(92vw,620px)'; n.style.boxShadow='0 8px 30px #0002';
+  document.body.appendChild(n); setTimeout(()=>n.remove(),4500);
+}
+function sdIsUuid(v){return /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(String(v||''));}
+function sdSlug(v){return String(v||'file').toLowerCase().replace(/[^a-z0-9._-]+/g,'-').slice(0,70)||'file';}
+async function sdUploadPublic(file,folder){
+  if(!file) return '';
+  if(!file.type || !['image/jpeg','image/png','image/webp'].includes(file.type)) throw new Error('Rasm JPG, PNG yoki WEBP formatida bo‘lishi kerak.');
+  if(file.size>10*1024*1024) throw new Error('Rasm hajmi 10 MB dan oshmasligi kerak.');
+  const randomId=(crypto.randomUUID?crypto.randomUUID():Math.random().toString(36).slice(2));
+  const path=`${folder}/${Date.now()}-${randomId}-${sdSlug(file.name)}`;
+  const {error}=await sdDb.storage.from('stend-public').upload(path,file,{upsert:false,contentType:file.type});
+  if(error) throw error;
+  return sdDb.storage.from('stend-public').getPublicUrl(path).data.publicUrl;
+}
+function sdProductFromDb(r){return {id:r.id,code:r.product_code,name:r.name,categories:r.categories||[],category:(r.categories||[])[0]||'',schoolSubs:r.school_subcategories||[],size:r.size||'',image:r.image_path||''};}
+function sdMaterialFromDb(r){return {id:r.id,name:r.name,short:r.short_description||'',description:r.description||'',image:r.image_path||'',gallery:r.gallery_paths||[],preview3d:r.preview_3d_path||''};}
+async function sdLoadPublicData(){
+  const localProducts=load(KEYS.products,[]), localMaterials=load(KEYS.materials,[]), localPrices=load(KEYS.prices,DEFAULT_PRICES);
+  const [pr, mr, rr, promoResult]=await Promise.all([
+    sdDb.from('products').select('*').eq('is_active',true).order('sort_order').order('created_at',{ascending:false}),
+    sdDb.from('materials').select('*').eq('is_active',true).order('created_at',{ascending:false}),
+    sdDb.from('price_settings').select('*'),
+    sdDb.from('promo_settings').select('*').eq('id',1).maybeSingle()
+  ]);
+  if(pr.error) throw pr.error; if(mr.error) throw mr.error; if(rr.error) throw rr.error;
+  if(promoResult.error) throw promoResult.error;
+  if(promoResult.data) promo={title:promoResult.data.title||'',text:promoResult.data.description||'',productId:promoResult.data.product_id||'',image:promoResult.data.image_url||''};
+  products=(pr.data||[]).length?(pr.data||[]).map(sdProductFromDb):localProducts;
+  materials=(mr.data||[]).length?(mr.data||[]).map(sdMaterialFromDb):localMaterials;
+  const mapped={...DEFAULT_PRICES,...localPrices};
+  for(const row of (rr.data||[])){
+    if(row.price_key.startsWith('pocket_')){const i=Number(row.price_key.slice(7)); if(Number.isInteger(i)&&mapped.pockets[i]) mapped.pockets[i].price=Number(row.amount);}
+    else if(Object.prototype.hasOwnProperty.call(mapped,row.price_key)) mapped[row.price_key]=Number(row.amount);
+  }
+  if((rr.data||[]).length) prices=mapped; else prices={...DEFAULT_PRICES,...localPrices};
+  // Eski brauzer ma'lumotlari bo'sh server jadvali bilan ustidan yozilmaydi.
+  if((pr.data||[]).length) save(KEYS.products,products);
+  if((mr.data||[]).length) save(KEYS.materials,materials);
+  if((rr.data||[]).length) save(KEYS.prices,prices);
+  renderCategories(); renderProducts(); renderMaterials();
+  sdOnlineReady=true;
+}
+async function sdSavePriceRows(){
+  const labels={banner:['Banner','m²'],oracal:['Orakal','m²'],foamOracal:['Fomeks + orakal','m²'],glass:['Orgsteklo stend','m²'],alucobond:['Alucobond','m²'],oracalCut:['Orakal reska','m²'],oracalGoldBronze:['Orakal reska — oltin va bronza','m²'],acrylic:['Akril — oddiy','m²'],acrylicGold:['Akril — oltin rangli','m²'],reyka:['Reyka','metr'],bold:['Bold','dona']};
+  const rows=Object.keys(labels).map(k=>({price_key:k,title:labels[k][0],amount:prices[k],unit:labels[k][1]}));
+  prices.pockets.forEach((p,i)=>rows.push({price_key:`pocket_${i}`,title:`Karmashka ${p.name}`,amount:p.price,unit:'dona'}));
+  const {error}=await sdDb.from('price_settings').upsert(rows,{onConflict:'price_key'}); if(error) throw error;
+}
+
+
+// Reklama hamma qurilmalarda bir xil ko‘rinishi uchun Supabase bazasida saqlanadi.
+renderPromoForm=function(){
+  document.getElementById('promoTitle').value=promo.title||'Siz uchun zamonaviy stendlar';
+  document.getElementById('promoText').value=promo.text||'Maktab, bog‘cha, ofis va tashkilotlar uchun sifatli stendlar.';
+  document.getElementById('promoProduct').innerHTML='<option value="">Faqat reklama matni</option>'+products.map(p=>`<option value="${p.id}">${esc(p.name)}</option>`).join('');
+  document.getElementById('promoProduct').value=promo.productId||'';
+};
+savePromo=async function(){
+  if(!adminAuthed){alert('Avval Admin sifatida kiring.');return;}
+  const btn=document.querySelector('#promoAdmin button.btn-gold');
+  if(btn){btn.disabled=true;btn.textContent='Saqlanmoqda...';}
+  try{
+    const file=document.getElementById('promoImage').files[0];
+    const imageUrl=file?await sdUploadPublic(file,'promotions'):(promo.image||'');
+    const data={
+      id:1,
+      title:document.getElementById('promoTitle').value.trim(),
+      description:document.getElementById('promoText').value.trim(),
+      product_id:document.getElementById('promoProduct').value||null,
+      image_url:imageUrl
+    };
+    const {data:row,error}=await sdDb.from('promo_settings').upsert(data,{onConflict:'id'}).select().single();
+    if(error) throw error;
+    promo={title:row.title||'',text:row.description||'',productId:row.product_id||'',image:row.image_url||''};
+    save(KEYS.promo,promo);
+    renderHero();
+    document.getElementById('promoImage').value='';
+    sdToast('Reklama umumiy onlayn bazaga saqlandi.',true);
+  }catch(err){
+    console.error(err);
+    alert('Reklama saqlanmadi: '+(err.message||String(err)));
+  }finally{
+    if(btn){btn.disabled=false;btn.textContent='Reklamani saqlash';}
+  }
+};
+renderHero=function(){
+  const title=promo.title||'Siz uchun zamonaviy stendlar';
+  const description=promo.text||'Maktab, bog‘cha, ofis va tashkilotlar uchun sifatli stendlar. O‘zingizga mos material va o‘lchamni tanlang.';
+  document.getElementById('heroTitle').textContent=title;
+  document.getElementById('heroText').textContent=description;
+  document.getElementById('heroArt').innerHTML=promo.image
+    ? `<img src="${promo.image}" alt="Reklama" onclick="promo.productId?openConfig(promo.productId):document.getElementById('catalogSection').scrollIntoView({behavior:'smooth'})">`
+    : `<div class="hero-placeholder" onclick="promo.productId?openConfig(promo.productId):document.getElementById('catalogSection').scrollIntoView({behavior:'smooth'})">SIZNING STENDINGIZ<br><span style="font-size:11px">REKLAMA JOYI</span></div>`;
+};
+
+// Haqiqiy admin autentifikatsiyasi: demo parol butunlay chetlab o'tiladi.
+loginAdmin=async function(){
+  const email=document.getElementById('adminEmail').value.trim(); const password=document.getElementById('adminPassword').value;
+  if(!email||!password){alert('Admin email va parolni kiriting.');return;}
+  const {data,error}=await sdDb.auth.signInWithPassword({email,password});
+  if(error){alert('Kirish amalga oshmadi: '+error.message);return;}
+  const {data:role,error:roleErr}=await sdDb.from('admin_users').select('user_id').eq('user_id',data.user.id).maybeSingle();
+  if(roleErr||!role){await sdDb.auth.signOut();alert('Bu hisobga Admin huquqi berilmagan.');return;}
+  adminAuthed=true; document.getElementById('adminLogin').classList.add('hidden'); document.getElementById('adminDashboard').classList.remove('hidden');
+  try{await sdLoadPublicData(); await sdLoadOrders(); renderAdmin(); startNewOrderNotifications();}catch(e){console.error(e);sdToast('Admin ma’lumotlarini yuklashda xatolik: '+e.message);}
+};
+
+// Mahsulot saqlash: rasm Storage'ga, ma'lumot products jadvaliga yoziladi.
+const sdOldSaveProduct=saveProduct;
+saveProduct=async function(e){
+  e.preventDefault(); if(!adminAuthed){alert('Avval Admin sifatida kiring.');return;}
+  const id=document.getElementById('editId').value; const old=products.find(x=>x.id===id); const file=document.getElementById('pImage').files[0];
+  const categories=[...document.querySelectorAll('#pCategories input:checked')].map(x=>x.value); const schoolSubs=[...document.querySelectorAll('#pSchoolSubs input:checked')].map(x=>x.value);
+  if(!categories.length){alert('Kamida bitta kategoriya tanlang.');return;}
+  try{
+    const image=file?await sdUploadPublic(file,'products'):(old?.image||'');
+    const code=old?.code||nextProductCode();
+    const payload={product_code:code,name:document.getElementById('pName').value.trim(),categories,school_subcategories:categories.includes('Maktab')?schoolSubs:[],size:document.getElementById('pSize').value.trim(),image_path:image,is_active:true};
+    const {data,error}=await sdDb.from('products').upsert(payload,{onConflict:'product_code'}).select().single(); if(error) throw error;
+    const item=sdProductFromDb(data); products=products.filter(x=>x.code!==item.code); products.unshift(item); save(KEYS.products,products);
+    resetProductForm(); renderAdminProducts(); renderProducts(); renderPromoForm(); sdToast('Mahsulot onlayn bazaga saqlandi.',true);
+  }catch(err){console.error(err);alert('Mahsulot saqlanmadi: '+err.message);}
+};
+
+// Materiallar: asosiy, galereya va 3D rasmlari public Storage'da saqlanadi.
+const sdOldSaveMaterial=saveMaterial;
+saveMaterial=async function(e){
+  e.preventDefault(); if(!adminAuthed){alert('Avval Admin sifatida kiring.');return;}
+  const id=document.getElementById('materialEditId').value; const old=materials.find(x=>x.id===id);
+  const main=document.getElementById('materialImage').files[0]; const gallery=[...document.getElementById('materialGallery').files]; const preview=document.getElementById('material3d').files[0];
+  if(!old&&!main){alert('Asosiy material rasmini yuklang.');return;}
+  try{
+    const image=main?await sdUploadPublic(main,'materials'):(old?.image||'');
+    const galleryPaths=gallery.length?await Promise.all(gallery.map(f=>sdUploadPublic(f,'materials/gallery'))):(old?.gallery||[]);
+    const preview3d=preview?await sdUploadPublic(preview,'materials/3d'):(old?.preview3d||'');
+    const payload={name:document.getElementById('materialName').value.trim(),short_description:document.getElementById('materialShort').value.trim(),description:document.getElementById('materialDescription').value.trim(),image_path:image,gallery_paths:galleryPaths,preview_3d_path:preview3d,is_active:true};
+    let query=sdDb.from('materials'); if(sdIsUuid(id)) query=query.update(payload).eq('id',id); else query=query.insert(payload);
+    const {data,error}=await query.select().single(); if(error) throw error;
+    const item=sdMaterialFromDb(data); materials=materials.filter(x=>x.id!==item.id); materials.unshift(item); save(KEYS.materials,materials);
+    resetMaterialForm(); renderAdminMaterials(); renderMaterials(); sdToast('Material va rasmlari onlayn saqlandi.',true);
+  }catch(err){console.error(err);alert('Material saqlanmadi: '+err.message);}
+};
+
+// Narxlar bazada saqlanadi; boshqa qurilmalar ham shu narxlarni oladi.
+const sdOldSavePrices=savePrices;
+savePrices=async function(){
+  if(!adminAuthed){alert('Avval Admin sifatida kiring.');return;}
+  try{sdOldSavePrices(); await sdSavePriceRows(); sdToast('Narxlar Supabase bazasiga saqlandi.',true);}
+  catch(err){console.error(err);alert('Narxlar bazaga yozilmadi: '+err.message);}
+};
+
+// Buyurtma yuborish: RPC buyurtma va barcha stend qatorlarini bitta tranzaksiyada saqlaydi.
+const sdLegacyConfirmReminder=confirmReminder;
+confirmReminder=async function(){
+  if(!document.getElementById('reminderCheck').checked || !pendingOrderForm) return;
+  if(!cart.length){alert('Savatcha bo‘sh.');return;}
+  const btn=document.getElementById('reminderConfirm'); btn.disabled=true; btn.textContent='Yuborilmoqda...';
+  const total=cart.reduce((sum,x)=>sum+Number(x.total||0),0);
+  const payload={
+    order_number:'SD-'+new Date().getFullYear()+'-'+String(Date.now()).slice(-6),
+    customer_name:pendingOrderForm.name, phone:pendingOrderForm.phone,
+    organization:pendingOrderForm.org, customer_note:pendingOrderForm.note,
+    customer_confirmed:true,total_amount:total,
+    items:cart.map(x=>({productId:x.productId,code:x.code,name:x.name,width:x.width,height:x.height,material:x.material,materialName:x.materialName,qty:x.qty,unitTotal:x.unitTotal,total:x.total,reyka:x.reyka,bold:x.bold,pockets:x.pockets||[],designFileName:x.designFileName||'',designNote:x.designNote||''}))
+  };
+  try{
+    const {data,error}=await sdDb.rpc('submit_customer_order',{p_payload:payload}); if(error) throw error;
+    const orderNo=data?.order_number||payload.order_number;
+    cart=[]; save(KEYS.cart,cart); updateCartCount();
+    document.getElementById('checkoutForm').reset();
+    document.getElementById('orderNumber').textContent='Buyurtma raqami: '+orderNo+' • Jami: '+money(total);
+    document.querySelector('.cart-layout').classList.add('hidden'); document.getElementById('orderSuccess').classList.remove('hidden');
+    document.getElementById('reminderModal').classList.remove('show'); pendingOrderForm=null;
+    sdToast('Buyurtmangiz onlayn bazaga yuborildi.',true);
+  }catch(err){console.error(err);alert('Buyurtma bazaga yuborilmadi: '+err.message+'\nIltimos, qayta urinib ko‘ring.');}
+  finally{btn.disabled=!document.getElementById('reminderCheck').checked;btn.textContent='Tasdiqlash va buyurtmani yuborish';}
+};
+
+// Admin buyurtmalarini bazadan o'qish va holatini yangilash.
+async function refreshAdminOrders(){try{await sdLoadOrders();sdToast('Buyurtmalar bazadan yangilandi.',true);}catch(e){console.error(e);alert('Buyurtmalar yangilanmadi: '+e.message);}}
+// Yangi buyurtmalar sonini admin panelida doim ko‘rsatish.
+let sdOrderNoticeTimer=null;
+let sdKnownOrderIds=new Set();
+function updateNewOrderNotice(){
+  const fresh=orders.filter(o=>['Yangi','Yangi buyurtma','Kutilmoqda'].includes(String(o.status||'').trim()));
+  const count=fresh.length;
+  const strip=document.getElementById('newOrderNotice');
+  const stripCount=document.getElementById('newOrderNoticeCount');
+  const tabCount=document.getElementById('newOrderTabCount');
+  if(strip)strip.style.display=count?'block':'none';
+  if(stripCount)stripCount.textContent=String(count);
+  if(tabCount){tabCount.textContent=String(count);tabCount.style.display=count?'inline-block':'none';}
+  const tab=document.getElementById('ordersAdminTab');
+  if(tab)tab.setAttribute('aria-label',`Buyurtmalar, ${count} ta yangi`);
+}
+function openNewOrders(){
+  const tab=document.getElementById('ordersAdminTab');
+  if(tab)adminTab('ordersAdmin',tab);
+  const section=document.getElementById('ordersAdmin');
+  if(section)section.scrollIntoView({behavior:'smooth',block:'start'});
+}
+async function sdPollNewOrders(){
+  if(!adminAuthed||!sdDb)return;
+  try{
+    const {data,error}=await sdDb.from('customer_orders')
+      .select('order_number,status,created_at')
+      .order('created_at',{ascending:false}).limit(200);
+    if(error)throw error;
+    const rows=data||[];
+    const latestIds=new Set(rows.map(x=>String(x.order_number)));
+    const newArrivals=rows.filter(x=>!sdKnownOrderIds.has(String(x.order_number)));
+    if(sdKnownOrderIds.size){
+      newArrivals.forEach(x=>{
+        if(!['Yangi','Yangi buyurtma','Kutilmoqda'].includes(String(x.status||'').trim()))return;
+        if(typeof sdToast==='function')sdToast('Yangi buyurtma keldi: '+x.order_number,true);
+      });
+    }
+    sdKnownOrderIds=latestIds;
+    await sdLoadOrders();
+    updateNewOrderNotice();
+  }catch(e){console.warn('Yangi buyurtmalar tekshiruvida xatolik:',e.message||e);}
+}
+function startNewOrderNotifications(){
+  if(sdOrderNoticeTimer)clearInterval(sdOrderNoticeTimer);
+  sdKnownOrderIds=new Set(orders.map(o=>String(o.number)));
+  updateNewOrderNotice();
+  sdOrderNoticeTimer=setInterval(sdPollNewOrders,20000);
+}
+async function sdLoadOrders(){
+  const {data,error}=await sdDb.from('customer_orders').select('*,order_items(*)').order('created_at',{ascending:false});
+  if(error) throw error;
+  const rawOrders=data||[];
+  const productIds=[...new Set(rawOrders.flatMap(o=>(o.order_items||[]).map(x=>x.product_id).filter(v=>v!==null&&v!==undefined).map(String)))];
+  const productCodes=[...new Set(rawOrders.flatMap(o=>(o.order_items||[]).map(x=>x.product_code).filter(Boolean)))];
+  let productById={},productByCode={};
+  if(productIds.length||productCodes.length){
+    let q=sdDb.from('products').select('id,product_code,image_path');
+    const filters=[];
+    if(productIds.length) filters.push('id.in.('+productIds.join(',')+')');
+    if(productCodes.length) filters.push('product_code.in.('+productCodes.map(v=>'"'+String(v).replace(/"/g,'\\"')+'"').join(',')+')');
+    if(filters.length) q=q.or(filters.join(','));
+    const {data:prows,error:perr}=await q;
+    if(perr) console.warn('Mahsulot rasmlari olinmadi:',perr.message);
+    (prows||[]).forEach(r=>{if(r.id!==null)productById[String(r.id)]=r.image_path||'';if(r.product_code)productByCode[r.product_code]=r.image_path||'';});
+  }
+  orders=rawOrders.map(o=>({number:o.order_number,date:new Date(o.created_at).toLocaleString('uz-UZ'),name:o.customer_name,phone:o.phone,org:o.organization||'',note:o.customer_note||'',status:o.status,total:Number(o.total_amount),customerConfirmed:o.customer_confirmed,items:(o.order_items||[]).map(x=>({name:x.product_name,code:x.product_code||'',image:productById[String(x.product_id)]||productByCode[x.product_code]||'',width:Number(x.width_cm||0),height:Number(x.height_cm||0),material:x.material_key,materialName:x.material_name,qty:x.quantity,unitTotal:Number(x.unit_price),total:Number(x.line_total),reyka:Number(x.reyka_meters||0),bold:Number(x.bold_quantity||0),pockets:x.pockets||[],designNote:x.design_note||'',designFileName:x.design_file_name||''}))}));
+  save(KEYS.orders,orders); renderOrders(); updateNewOrderNotice();
+}
+
+// Buyurtmani faqat admin tasdig‘i bilan bazadan o‘chirish.
+// order_items.order_id -> customer_orders.id bog‘lanishida ON DELETE CASCADE mavjud.
+async function deleteAdminOrder(orderNumber, button){
+  if(!adminAuthed){alert('Buyurtmani o‘chirish uchun Admin sifatida kiring.');return;}
+  const order=orders.find(o=>String(o.number)===String(orderNumber));
+  if(!order){alert('Buyurtma topilmadi. Buyurtmalarni yangilang.');return;}
+  if(!confirm('DIQQAT! '+order.number+' raqamli buyurtma va uning stend qatorlari butunlay o‘chiriladi.\\n\\nDavom etasizmi?'))return;
+  const oldText=button?.textContent;
+  if(button){button.disabled=true;button.textContent='O‘chirilmoqda...';}
+  try{
+    const {data,error}=await sdDb.rpc('admin_delete_customer_order',{p_order_number:String(orderNumber)});
+    if(error)throw error;
+    if(data!==true && data?.success!==true)throw new Error('Baza buyurtma o‘chirilganini tasdiqlamadi.');
+    orders=orders.filter(o=>String(o.number)!==String(orderNumber));
+    save(KEYS.orders,orders); renderOrders();
+    if(typeof updateNewOrderNotice==='function')updateNewOrderNotice();
+    sdToast('Buyurtma bazadan o‘chirildi: '+orderNumber,true);
+  }catch(err){
+    console.error('Buyurtmani o‘chirish xatosi:',err);
+    alert('Buyurtma o‘chirilmadi: '+(err.message||String(err))+'\\nAvval SQL ruxsat funksiyasini Supabase’da ishga tushiring.');
+    if(button){button.disabled=false;button.textContent=oldText||'Buyurtmani o‘chirish';}
+  }
+}
+
+// Holat o'zgarishini bazaga yozish va natijani qayta tekshirish.
+changeOrderStatus=async function(n,s){
+  if(!adminAuthed) throw new Error('Admin huquqi talab qilinadi. Admin hisobiga qayta kiring.');
+  const {data,error}=await sdDb.from('customer_orders').update({status:s}).eq('order_number',n).select('order_number,status').maybeSingle();
+  if(error) throw error;
+  if(!data) throw new Error('Buyurtma yangilanmadi. Admin huquqi yoki RLS UPDATE siyosatini tekshirish kerak.');
+  const o=orders.find(x=>String(x.number)===String(n));if(o)o.status=data.status;
+  renderOrders();sdToast('Buyurtma holati bazada saqlandi: '+data.status,true);
+  return data.status;
+};
+async function saveOrderStatusFromCard(n){
+  const el=document.getElementById('orderStatus-'+n);const msg=document.getElementById('orderMsg-'+n);
+  if(!el){alert('Holat tanlash maydoni topilmadi.');return;}
+  const btn=el.parentElement.querySelector('button.btn-gold');if(btn){btn.disabled=true;btn.textContent='Saqlanmoqda...';}
+  if(msg)msg.textContent='';
+  try{await changeOrderStatus(n,el.value);}
+  catch(err){if(msg)msg.textContent=err.message||String(err);}
+  finally{if(btn){btn.disabled=false;btn.textContent='Holatni saqlash';}}
+}
+window.openOrderImage=function(src,title){
+  if(!src)return;
+  const modal=document.getElementById('zoomModal');
+  const img=document.getElementById('zoomImage');
+  if(!modal||!img){window.open(src,'_blank');return;}
+  document.getElementById('zoomHeading').textContent='Buyurtma rasmi — katta ko‘rinish';
+  img.src=src; img.style.display='block'; img.style.width='100%';
+  img.style.maxHeight='78vh'; img.style.objectFit='contain';
+  document.getElementById('zoomName').textContent=title||'Stend rasmi';
+  document.getElementById('zoomInfo').textContent='Rasmni kattalashtirib ko‘rishingiz mumkin.';
+  const choose=document.getElementById('zoomChoose');
+  if(choose)choose.style.display='none';
+  modal.classList.add('show');
+};
+window.printAdminOrder=function(orderNumber){
+  const o=orders.find(x=>String(x.number)===String(orderNumber));
+  if(!o){alert('Buyurtma topilmadi. Buyurtmalarni yangilang.');return;}
+  const w=window.open('','_blank');
+  if(!w){alert('Chop etish oynasi bloklandi. Chrome’da ushbu fayl uchun pop-up oynalarga ruxsat bering.');return;}
+  const safe=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const fmt=v=>money(Number(v)||0);
+  const itemRows=(o.items||[]).map((x,i)=>{
+    const img=x.image?`<img src="${safe(x.image)}" alt="${safe(x.name)}">`:'<div class="no-image">Rasm mavjud emas</div>';
+    const extras=[x.reyka?`Reyka: ${safe(x.reyka)} m`:'',x.bold?`Bolt: ${safe(x.bold)} ta`:'',Array.isArray(x.pockets)&&x.pockets.length?`Karmashka: ${safe(x.pockets.map(p=>typeof p==='string'?p:(p.name||p.size||JSON.stringify(p))).join(', '))}`:'',x.designNote?`Dizayn izohi: ${safe(x.designNote)}`:'',x.designFileName?`Mijoz fayli: ${safe(x.designFileName)}`:''].filter(Boolean).join('<br>');
+    return `<tr><td>${i+1}</td><td><div class="product">${img}<div><b>${safe(x.name)}</b><small>${safe(x.code||'')}</small>${extras?`<small>${extras}</small>`:''}</div></div></td><td>${safe(x.width)} × ${safe(x.height)} sm</td><td>${safe(x.materialName||x.material||'—')}</td><td>${safe(x.qty||1)}</td><td>${fmt(x.unitTotal)}</td><td><b>${fmt(x.total)}</b></td></tr>`;
+  }).join('');
+  const totalItems=(o.items||[]).reduce((a,x)=>a+(Number(x.total)||0),0);
+  w.addEventListener('load',async()=>{
+    const imgs=Array.from(w.document.images);
+    await Promise.all(imgs.map(img=>{
+      if(img.complete) return Promise.resolve();
+      return new Promise(resolve=>{
+        img.onload=resolve;
+        img.onerror=resolve;
+        setTimeout(resolve,5000);
+      });
+    }));
+    setTimeout(()=>{w.focus();w.print();},350);
+  },{once:true});
+  w.document.open();
+  w.document.write(`<!doctype html><html lang="uz"><head><meta charset="utf-8"><title>${safe(o.number)} — SHOH DIZAYN</title><style>
+  @page{size:A4 landscape;margin:10mm}*{box-sizing:border-box}body{font-family:Arial,sans-serif;color:#17233b;margin:0;font-size:12px}h1{font-size:21px;margin:0 0 5px;color:#101d38}h2{font-size:15px;margin:22px 0 8px}.muted{color:#64748b}.head{display:flex;justify-content:space-between;border-bottom:3px solid #d7ad4c;padding-bottom:12px}.brand{font-weight:800;letter-spacing:1px}.contact{font-weight:bold;color:#8a6415}.info{display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;margin:16px 0}.info div{padding:7px 0;border-bottom:1px solid #e5e7eb}table{width:100%;border-collapse:collapse;margin-top:10px}th,td{border:1px solid #cbd5e1;padding:8px;text-align:left;vertical-align:middle}tbody tr{break-inside:avoid;page-break-inside:avoid}th{background:#eef2f7}.product{display:flex;gap:12px;align-items:flex-start;min-width:250px}.product>div{min-width:0}.product img{width:165px;height:125px;object-fit:contain;object-position:center;border:1px solid #dbe1e8;border-radius:6px;background:#f7f8fa;flex:0 0 auto}.no-image{width:165px;height:125px;display:grid;place-items:center;background:#f1f5f9;color:#64748b;text-align:center;font-size:10px}small{display:block;color:#526078;margin-top:4px;line-height:1.4}.total{margin:18px 0 0 auto;width:270px;font-size:14px}.total div{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #ddd}.grand{font-size:18px;font-weight:bold;color:#101d38}.foot{margin-top:25px;border-top:1px solid #ddd;padding-top:10px;color:#64748b}.actions{margin:15px 0}.actions button{padding:9px 18px;background:#14213d;color:#fff;border:0;border-radius:6px;cursor:pointer}@media print{body{margin:0}.actions{display:none}tr{break-inside:avoid;page-break-inside:avoid}img{max-width:100%;print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+  </style></head><body><div class="head"><div><div class="brand">SHOH DIZAYN</div><h1>BUYURTMA VARAQASI</h1><div class="muted">Stendlar va reklama mahsulotlari</div></div><div class="contact">Murojaat uchun: 88 605 52 52</div></div>
+  <div class="info"><div><b>Buyurtma raqami:</b> ${safe(o.number)}</div><div><b>Sana:</b> ${safe(o.date)}</div><div><b>Mijoz:</b> ${safe(o.name)}</div><div><b>Telefon:</b> ${safe(o.phone)}</div><div><b>Tashkilot:</b> ${safe(o.org||'—')}</div><div><b>Holati:</b> ${safe(o.status||'Yangi')}</div><div><b>Izoh:</b> ${safe(o.note||'—')}</div><div><b>Tasdiq:</b> ${o.customerConfirmed?'Mijoz tasdiqlagan':'—'}</div></div>
+  <h2>Buyurtma tarkibi</h2><table><thead><tr><th>№</th><th>Stend / rasm / SD kodi va qo‘shimcha ma’lumot</th><th>O‘lchami</th><th>Material</th><th>Soni</th><th>Bir donasi</th><th>Jami</th></tr></thead><tbody>${itemRows}</tbody></table>
+  <div class="total"><div><span>Mahsulotlar jami:</span><b>${fmt(totalItems)}</b></div><div class="grand"><span>BUYURTMA JAMI:</span><b>${fmt(o.total)}</b></div></div>
+  <div class="foot">SHOH DIZAYN • Murojaat uchun: 88 605 52 52<br>Ushbu hujjat buyurtma ma’lumotlari asosida shakllantirildi.</div><div class="actions"><button onclick="window.print()">Chop etish / PDF sifatida saqlash</button></div>
+  </body></html>`);
+  w.document.close();
+};
+window.saveOrderStatusFromCard=saveOrderStatusFromCard;
+window.copyOrderPhone=async function(phone){
+  try{
+    if(navigator.clipboard&&window.isSecureContext) await navigator.clipboard.writeText(String(phone));
+    else{const ta=document.createElement('textarea');ta.value=String(phone);ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();const ok=document.execCommand('copy');ta.remove();if(!ok)throw new Error('Nusxalash bloklandi');}
+    sdToast('Telefon raqami nusxalandi: '+phone,true);
+  }catch(e){window.prompt('Telefon raqamini nusxalash uchun:',String(phone));}
+};
+
+// Sayt ochilganda hammaga umumiy katalog/narxlar yuklanadi.
+(async()=>{try{await sdLoadPublicData();}catch(err){console.warn('Supabase ulanishi hozircha mavjud emas:',err.message);sdToast('Onlayn baza bilan aloqa bo‘lmadi. Mahalliy nusxa ko‘rsatilmoqda.');}})();
+
+</script>
+</body></html>
